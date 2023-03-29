@@ -1,11 +1,19 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import SearchResults from "../pages/SearchResults";
 
 export default function Header() {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [renderSearch, setRenderSearch] = useState(false);
+  const params = useParams()
+  const location = useLocation()
+  
+  useEffect(() => {
+    if (location.pathname !== `/search/${params.query}`) {
+      setRenderSearch(false);
+    }
+  }, [location, params.query]);
 
   function handleSearch(e) {
     setSearch(e.target.value.toLowerCase());
