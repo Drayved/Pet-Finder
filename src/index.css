@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-gray-100 text-[#edffec] 
+    
+}
+
+.top-info{
+    @apply flex justify-center flex-col items-center;
+    @apply bg-[#9792e3] text-[#edffec]
+
+}
+
+.title{
+    @apply mt-[3rem] text-3xl 
+}
+
+.sub-title{
+   @apply text-lg mb-[1em] italic
+}
+
+.search-bars{
+    @apply mb-2 
+}
+
+.search-animal::placeholder,
+.search-zip::placeholder{
+    @apply text-[#edffec]
+}
+
+.search-animal,
+.search-zip{
+    @apply bg-[#5a5766] 
+}
+
+.search-animal{
+    @apply mr-0.5 
+}
+
+.search-zip{
+    @apply ml-0.5
+}
+
+.animal-btns {
+    @apply flex justify-around  ;
+     
+}
+
+.animal-btns button:hover{
+    @apply text-[1.2em] text-[#61e786]
+}
+
+.navbar{
+    @apply bg-[#5a5766] p-1
+}
+
+.animal-list{
+    @apply flex flex-wrap gap-5 
+}
+
+
+.animal-cards{
+    @apply bg-gray-200 shadow-lg shadow-[#48435c] text-[#48435c];
+    @apply w-[19%] h-[350px] p-0 mx-auto  
+}
+
+.dog-list{
+    @apply my-[6rem] 
+}
+
+.cat-list{
+    @apply my-[15rem]
+}
+
+.animal-img{
+    @apply mx-auto h-[75%] min-w-[100%]
+}
+
+.mid-banner{
+    @apply bg-[#9792e3] text-center
+}
+
+.animal-card-text{
+    @apply text-center
+}
+
+.footer{
+    @apply bg-[#9792e3] text-center
+}
+
+
+
+@media (max-width: 900px){
+    .animal-cards{
+        @apply w-[45%]
+    }
+}
+
+@media (min-width: 1280px){
+    .animal-cards{
+        @apply h-[500px]
+    }
+}
+
+
