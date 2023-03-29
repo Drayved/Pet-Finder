@@ -91,7 +91,7 @@ body{
 }
 
 .location-popup{
-    @apply bg-blue-900 absolute z-50
+    @apply fixed top-0 left-0 w-full h-full flex items-center justify-center
 }
 
 @media (max-width: 900px){
