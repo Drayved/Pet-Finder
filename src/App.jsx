@@ -16,6 +16,10 @@ export const apiKey = "hIZLptHNbS2CL9HzCkMRWZ3ATzJYwIa6r3oEfIoKJXgo14GGyq"
 export const apiSecret = "6J9hpXiKvOI69tDqVMo4fUz5Sk9Xjmkl31ZnHUf0"
 export const AuthContext = createContext();
 
+const onLocationReceived = (location) => {
+  setLocationPermission(location);
+};
+
 function App() {
   const  params = useParams()
   const [locationPermisson, setLocationPermission] = useState(null)
@@ -59,9 +63,9 @@ function App() {
       
     };
     fetchPets();
-  }, [accessToken]);
+  }, [accessToken, locationPermisson]);
 
-  if (results === null) return <Location setLocationPermission={setLocationPermission} />;;
+  if (results === null) return <Location onLocationReceived={onLocationReceived} />;;
 
   const router = createBrowserRouter(createRoutesFromElements(
     
