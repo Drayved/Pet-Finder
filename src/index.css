@@ -90,7 +90,9 @@ body{
     @apply bg-[#9792e3] text-center
 }
 
-
+.location-popup{
+    @apply bg-blue-900 absolute z-50
+}
 
 @media (max-width: 900px){
     .animal-cards{
