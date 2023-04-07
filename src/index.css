@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-100 text-[#edffec] 
+    @apply bg-gray-100 text-[black] 
     
 }
 
@@ -48,26 +48,26 @@ body{
      
 }
 
-.animal-btns button:hover{
+.animal-btn:hover{
     @apply text-[1.2em] text-[#61e786]
 }
 
 .navbar{
-    @apply bg-[#5a5766] p-1
+    @apply bg-[#5a5766] p-1 text-[#edffec]
 }
 
 .animal-list{
-    @apply flex flex-wrap gap-5 
+    @apply flex flex-wrap gap-16 my-[5rem] mx-auto justify-center
 }
 
 
 .animal-cards{
     @apply bg-gray-200 shadow-lg shadow-[#48435c] text-[#48435c];
-    @apply w-[19%] h-[350px] p-0 mx-auto  
+    @apply  p-0 w-[250px] h-[400px]
 }
 
-.dog-list{
-    @apply my-[6rem] 
+.animal-cards:hover{
+    @apply cursor-pointer scale-110
 }
 
 .cat-list{
@@ -78,8 +78,33 @@ body{
     @apply mx-auto h-[75%] min-w-[100%]
 }
 
+/* Middle banner */
+.mid-container{
+    @apply bg-[#9792e3] text-[#edffec] py-10 
+}
+
 .mid-banner{
-    @apply bg-[#9792e3] text-center
+    @apply  flex justify-center justify-around px-36
+}
+
+.mid-title{
+    @apply text-2xl mb-10 font-bold text-center text-[#61e786]
+}
+
+.mid-titles{
+    @apply text-lg font-bold mb-4 
+}
+
+.mid-text{
+    @apply w-56 text-sm
+}
+
+.mid-btns {
+    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-[#61e786];
+}
+
+.mid-btns:hover{
+    @apply bg-[#61e786]
 }
 
 .animal-card-text{
@@ -87,23 +112,41 @@ body{
 }
 
 .footer{
-    @apply bg-[#9792e3] text-center
+    @apply bg-[#9792e3] text-center text-[#edffec]
 }
 
-.location-popup{
-    @apply absolute top-0 left-0 w-full h-full flex items-center justify-center bg-blue-800 z-50
-}
-
-@media (max-width: 900px){
+@media(max-width: 680px){
     .animal-cards{
-        @apply w-[45%]
+        @apply w-[200px]
+    }
+
+    .animal-card-text{
+        @apply text-sm
     }
 }
 
-@media (min-width: 1280px){
+@media(max-width: 485px){
     .animal-cards{
-        @apply h-[500px]
+        @apply gap-0 w-[180px] ml-[-10px] mr-[-10px]
+    }
+
+    .anima-list{
+        @apply gap-0
+    }
+
+}
+
+@media(max-width: 400px){
+    .animal-cards{
+        @apply w-[140px]
+    }
+
+    .animal-card-text{
+        @apply text-xs
     }
 }
+
+
+
 
 

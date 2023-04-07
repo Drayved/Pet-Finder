@@ -2,50 +2,39 @@ import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../App";
 import NotFound from "./NotFound"
 import { useParams }from "react-router-dom"
+import PetCards from "../components/PetCards";
+import PetSearch from "../apis/PetSearch";
 
 export default function SearchResults({ search }) {
-  const { results } = useContext(AuthContext);
-  const [filteredResults, setFilteredResults] = useState([]);
-  const searchResults = useParams()
-
+  const { results, filteredResults, setFilteredResults } = useContext(AuthContext);
+ 
+  console.log(search)
+  
   useEffect(() => {
-    // Filter the results based on the search term
-    const filtered = results.filter(
-      (animal) =>
-        animal.name.toLowerCase().includes(search) ||
-        animal.breeds.primary.toLowerCase().includes(search) ||
-        animal.type.toLowerCase().includes(search) ||
-        animal.age.toLowerCase().includes(search)
-    );
+    if (results) {
+      // Filter the results based on the search term
+      const filtered = results.filter(
+        (animal) =>
+          animal.name.toLowerCase().includes(search) ||
+          animal.breeds.primary.toLowerCase().includes(search) ||
+          animal.type.toLowerCase().includes(search) ||
+          animal.age.toLowerCase().includes(search)
+      );
+        
+      setFilteredResults(filtered);
+    }
+  }, [search]);
 
-    setFilteredResults(filtered);
-  }, [results]);
-
+  console.log(filteredResults)
+  
   return (
-    <div className="animal-list">
-      {search && filteredResults.length === 0 ? (
-        <NotFound />
+    <>
+      <PetSearch />
+      {filteredResults ? (
+        <PetCards data={filteredResults} />
       ) : (
-        filteredResults.map((animal) => (
-          <div className="animal-cards" key={animal.id}>
-            <img
-              className="animal-img"
-              src={animal.photos.length ? animal.photos[0].medium : ""}
-              alt={`Photo of ${animal.name}`}
-            />
-            <div className="animal-card-text">
-              <h2 className="font-bold">
-                {animal.name.length > 20
-                  ? animal.name.slice(0, 20) + "..."
-                  : animal.name}
-              </h2>
-              <p>
-                {animal.age} - <span>{animal.breeds.primary}</span>
-              </p>
-            </div>
-          </div>
-        ))
+        <NotFound />
       )}
-    </div>
+    </>
   );
 }

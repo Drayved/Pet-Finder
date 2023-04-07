@@ -5,19 +5,19 @@ export default function NavBar(){
     return(
         <div className="navbar">
             <ul className="animal-btns">
-                <li>
-                    <Link to="/dogs">Dogs</Link>
+                <li className="animal-btn">
+                    <Link to="dogs">Dogs</Link>
                 </li>
-                <li>
+                <li className="animal-btn">
                     <Link to="cats">Cats</Link>
                 </li>
-                <li>
+                <li className="animal-btn">
                     <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li className="animal-btn">
                     <Link to="horses">Horses</Link>
                 </li>
-                <li>
+                <li className="animal-btn">
                     <Link to="birds">Birds</Link>
                 </li>
             </ul>

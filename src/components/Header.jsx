@@ -1,32 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import SearchResults from "../pages/SearchResults";
+import { AuthContext } from "../App";
 
 export default function Header() {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [renderSearch, setRenderSearch] = useState(false);
-  const params = useParams()
-  const location = useLocation()
-  
+  const params = useParams();
+  const location = useLocation();
+
+  const {zipCode, setZipCode } = useContext(AuthContext);
+
+
   useEffect(() => {
     if (location.pathname !== `/search/${params.query}`) {
       setRenderSearch(false);
+    }
+    if(location.pathname === `/`){
+      setZipCode("")
+      setSearch("")
     }
   }, [location, params.query]);
 
   function handleSearch(e) {
     setSearch(e.target.value.toLowerCase());
-    if(e.keyCode === 13){
+    if (e.keyCode === 13) {
       setRenderSearch(false);
     }
-    
   }
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    setRenderSearch(true);
-    navigate(`/search/${search}`);
+    
+      if (zipCode && zipCode.length === 5) {
+        navigate(`/search/${search} || ?location=${zipCode}`);
+        
+      } else {
+        navigate(`/search/${search}`);
+      }
+      setRenderSearch(true);
+    }
+  
+
+  function handleZipCodeChange(e) {
+    setZipCode(e.target.value);
   }
 
   return (
@@ -45,13 +63,21 @@ export default function Header() {
             placeholder="Search dog breed, cat, etc."
             value={search}
             onChange={handleSearch}
-            onKeyDown={handleSearch}
+            onKeyUp={handleSearch}
           />
-          <input className="search-zip" type="text" placeholder="Zip code" />
+          <input
+            className="search-zip"
+            type="text"
+            placeholder="Zip code"
+            value={zipCode || ""}
+            onChange={handleZipCodeChange}
+            
+          />
           <button type="submit">Search</button>
         </form>
       </div>
       {renderSearch && <SearchResults search={search} />}
+      
     </div>
   );
 }

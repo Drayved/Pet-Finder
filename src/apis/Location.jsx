@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 
-export default function Location({ onLocationReceived }) {
+export default function Location({ onLocationReceived, zipCode}) {
   
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          onLocationReceived({ latitude, longitude });
+          onLocationReceived({  lat: latitude, lng: longitude});
+          console.log("Location received:", { latitude, longitude });
         },
         () => {
           alert("Could not get location, please try again.");
