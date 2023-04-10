@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-100 text-[black] 
+    @apply bg-gray-100 text-[black] m-0 p-0
     
 }
 
@@ -112,7 +112,7 @@ body{
 }
 
 .footer{
-    @apply bg-[#9792e3] text-center text-[#edffec]
+    @apply bg-[#9792e3] text-center text-[#edffec] fixed bottom-0 w-screen
 }
 
 @media(max-width: 680px){
