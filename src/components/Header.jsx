@@ -57,23 +57,30 @@ export default function Header() {
           </h3>
         </div>
         <form className="search-bars" onSubmit={handleFormSubmit}>
-          <input
-            className="search-animal"
-            type="text"
-            placeholder="Search dog breed, cat, etc."
-            value={search}
-            onChange={handleSearch}
-            onKeyUp={handleSearch}
-          />
-          <input
-            className="search-zip"
-            type="text"
-            placeholder="Zip code"
-            value={zipCode || ""}
-            onChange={handleZipCodeChange}
+          <div className="search-animal-container">
+            <input
+              className="search-animal"
+              type="text"
+              placeholder="Search dog breed, cat, etc."
+              value={search}
+              onChange={handleSearch}
+              onKeyUp={handleSearch}
+            />
+          </div>
+          <div className="search-zip-container">
+            <input
+              className="search-zip"
+              type="text"
+              placeholder="Zip code"
+              value={zipCode || ""}
+              onChange={handleZipCodeChange}
+            />
             
-          />
-          <button type="submit">Search</button>
+            
+          </div>
+          <button className="search-btn" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+          
+          
         </form>
       </div>
       {renderSearch && <SearchResults search={search} />}

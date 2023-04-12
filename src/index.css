@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-100 text-[black] m-0 p-0
-    
+    @apply bg-gray-100 text-[black] m-0 p-0;
+    font-family: 'Mukta', sans-serif;
 }
 
 .top-info{
     @apply flex justify-center flex-col items-center;
-    @apply bg-[#9792e3] text-[#edffec]
+    @apply bg-purple-800 text-[#edffec]
 
 }
 
 .title{
-    @apply mt-[3rem] text-3xl 
+    @apply mt-7 text-3xl 
 }
 
 .sub-title{
@@ -22,34 +22,57 @@ body{
 }
 
 .search-bars{
-    @apply mb-2 
+    @apply mb-9 bg-gray-100 flex rounded-md
 }
+
+.search-animal-container:hover,
+.search-zip-container:hover,
+.search-btn:hover{
+    @apply border-2 border-purple-900 rounded-md
+}
+
+.search-zip-container,
+.search-animal-container{
+    @apply flex
+}
+
 
 .search-animal::placeholder,
 .search-zip::placeholder{
-    @apply text-[#edffec]
+    @apply text-gray-500 text-center
 }
 
 .search-animal,
 .search-zip{
-    @apply bg-[#5a5766] 
+    @apply bg-gray-100 px-16 text-gray-700 border-purple-700 w-[100%];
+    @apply flex flex-grow my-2
 }
 
 .search-animal{
-    @apply mr-0.5 
+    @apply border-r-2  border-gray-400
 }
 
-.search-zip{
-    @apply ml-0.5
+input:focus, 
+textarea:focus,
+select:focus{
+    @apply outline-none 
+}
+
+.search-btn{
+    @apply bg-gray-100 text-black   border-purple-700 pr-3 my-4 mr-1.5 border-none;
+}
+
+.search-btn:hover,
+.search0btn:focus{
+    @apply scale-125 
 }
 
 .animal-btns {
     @apply flex justify-around  ;
-     
 }
 
 .animal-btn:hover{
-    @apply text-[1.2em] text-[#61e786]
+    @apply text-[1.2em] text-green-500
 }
 
 .navbar{
@@ -74,37 +97,40 @@ body{
     @apply my-[15rem]
 }
 
-.animal-img{
-    @apply mx-auto h-[75%] min-w-[100%]
-}
+.animal-img {
+    @apply mx-auto h-[75%] w-full overflow-hidden relative;
+    
+  }
+  
+
 
 /* Middle banner */
 .mid-container{
-    @apply bg-[#9792e3] text-[#edffec] py-10 
+    @apply bg-purple-800 text-[#edffec] py-10 
 }
 
 .mid-banner{
-    @apply  flex justify-center justify-around px-36
+    @apply  flex justify-center justify-around px-36 
 }
 
 .mid-title{
-    @apply text-2xl mb-10 font-bold text-center text-[#61e786]
+    @apply text-2xl mb-10 font-bold text-center text-green-500
 }
 
 .mid-titles{
-    @apply text-lg font-bold mb-4 
+    @apply text-xl font-bold mb-4 
 }
 
 .mid-text{
-    @apply w-56 text-sm
+    @apply w-56 text-lg
 }
 
 .mid-btns {
-    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-[#61e786];
+    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-green-600;
 }
 
 .mid-btns:hover{
-    @apply bg-[#61e786]
+    @apply bg-green-600
 }
 
 .animal-card-text{
@@ -112,7 +138,11 @@ body{
 }
 
 .footer{
-    @apply bg-[#9792e3] text-center text-[#edffec] fixed bottom-0 w-screen
+    @apply  bg-purple-800 text-center text-[#edffec] py-3  bottom-0 w-screen
+}
+
+.adopt-btns:hover{
+    @apply bg-[#370c52] text-white border-none
 }
 
 @media(max-width: 680px){
