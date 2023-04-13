@@ -106,11 +106,12 @@ select:focus{
 
 /* Middle banner */
 .mid-container{
-    @apply bg-purple-800 text-[#edffec] py-10 
+    @apply bg-purple-800 text-[#edffec] py-6 flex flex-col justify-center ;
+    
 }
 
 .mid-banner{
-    @apply  flex justify-center justify-around px-36 
+    @apply text-center ;
 }
 
 .mid-title{
@@ -122,7 +123,7 @@ select:focus{
 }
 
 .mid-text{
-    @apply w-56 text-lg
+    @apply  text-lg 
 }
 
 .mid-btns {
@@ -131,6 +132,14 @@ select:focus{
 
 .mid-btns:hover{
     @apply bg-green-600
+}
+
+.arrows-container{
+    @apply flex justify-around mt-3
+}
+
+.arrow-button{
+    @apply text-2xl 
 }
 
 .animal-card-text{
@@ -176,6 +185,25 @@ select:focus{
     }
 }
 
+@media(min-width: 767px){
+    .mid-container{
+        @apply text-center flex flex-row
+    }
+    .mid-banner{
+        @apply text-center mx-[5%]
+    }
+    .mid-btns{
+        @apply  w-40 
+    }
+    .row-container{
+        @apply  w-screen bg-purple-800 pt-5
+    }
+
+    .mid-text{
+        @apply text-sm w-56 
+    }
+
+}
 
 
 
