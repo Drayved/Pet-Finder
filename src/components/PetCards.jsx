@@ -32,7 +32,8 @@ export default function PetCards({ num1, num2 }){
                     <p>
                       {animal.age} - <span>{animal.breeds.primary}</span>
                     </p>
-                    <p>{animal.contact.address.city + ", " + animal.contact.address.state} <span>{animal.distance}</span></p>
+                    <p className="text-sm">{animal.contact.address.city + ", " + animal.contact.address.state} </p>
+                    <p className="text-sm">{animal.distance.toFixed(0) === 1 ? "mile away" : animal.distance.toFixed(0) + " miles away"}</p>
                   </div>
                 </div>
               </Link>

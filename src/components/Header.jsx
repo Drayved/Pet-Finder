@@ -61,7 +61,7 @@ export default function Header() {
             <input
               className="search-animal"
               type="text"
-              placeholder="Search dog breed, cat, etc."
+              placeholder="Search pets"
               value={search}
               onChange={handleSearch}
               onKeyUp={handleSearch}

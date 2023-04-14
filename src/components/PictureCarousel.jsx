@@ -15,7 +15,7 @@ export default function PictureCarousel({ photos }) {
         <img
           src={photos[prevIndex].medium}
           alt={`Animal ${prevIndex + 1}`}
-          className="opacity-30 h-96 w-88 prev-image"
+          className="opacity-30 h-96 w-[30%] prev-image"
         />
       )}
 
@@ -26,7 +26,7 @@ export default function PictureCarousel({ photos }) {
             src={photo.medium}
             alt={`Animal ${i + 1}`}
             style={{ display: i === index ? "inline-block" : "none", margin: 0 }}
-            className="h-96 w-88"
+            className="h-96 w-[100%]"
           />
         ))}
 
@@ -44,7 +44,7 @@ export default function PictureCarousel({ photos }) {
         <img
           src={photos[nextIndex].medium}
           alt={`Animal ${nextIndex + 1}`}
-          className="opacity-30 h-96 w-88 next-image"
+          className="opacity-30 h-96 w-[30%] next-image"
         />
       )}
 

@@ -7,9 +7,13 @@ body{
     font-family: 'Mukta', sans-serif;
 }
 
+.navbar{
+    @apply bg-[#5a5766] p-1 text-[#edffec] w-screen
+}
+
 .top-info{
-    @apply flex justify-center flex-col items-center;
-    @apply bg-purple-800 text-[#edffec]
+    @apply flex justify-center flex-col items-center text-center;
+    @apply bg-purple-800 text-[#edffec] w-screen
 
 }
 
@@ -18,8 +22,10 @@ body{
 }
 
 .sub-title{
-   @apply text-lg mb-[1em] italic
+   @apply  mb-[1em] italic 
 }
+
+/* Search */
 
 .search-bars{
     @apply mb-9 bg-gray-100 flex rounded-md
@@ -39,13 +45,13 @@ body{
 
 .search-animal::placeholder,
 .search-zip::placeholder{
-    @apply text-gray-500 text-center
+    @apply text-gray-500
 }
 
 .search-animal,
 .search-zip{
-    @apply bg-gray-100 px-16 text-gray-700 border-purple-700 w-[100%];
-    @apply flex flex-grow my-2
+    @apply bg-gray-100 px-12 text-gray-700 border-purple-700 w-[100%];
+    @apply flex my-2 
 }
 
 .search-animal{
@@ -67,16 +73,14 @@ select:focus{
     @apply scale-125 
 }
 
+/* animal list */
+
 .animal-btns {
     @apply flex justify-around  ;
 }
 
 .animal-btn:hover{
     @apply text-[1.2em] text-green-500
-}
-
-.navbar{
-    @apply bg-[#5a5766] p-1 text-[#edffec]
 }
 
 .animal-list{
@@ -86,11 +90,11 @@ select:focus{
 
 .animal-cards{
     @apply bg-gray-200 shadow-lg shadow-[#48435c] text-[#48435c];
-    @apply  p-0 w-[250px] h-[400px]
+    @apply  p-0 w-[250px] h-[400px] 
 }
 
 .animal-cards:hover{
-    @apply cursor-pointer scale-110
+    @apply cursor-pointer border-2 border-purple-800
 }
 
 .cat-list{
@@ -115,7 +119,7 @@ select:focus{
 }
 
 .mid-title{
-    @apply text-2xl mb-10 font-bold text-center text-green-500
+    @apply text-2xl font-bold text-center text-green-500
 }
 
 .mid-titles{
@@ -162,6 +166,11 @@ select:focus{
     .animal-card-text{
         @apply text-sm
     }
+
+    .search-animal,
+    .search-zip{
+        @apply w-56
+    }
 }
 
 @media(max-width: 485px){
@@ -171,6 +180,27 @@ select:focus{
 
     .anima-list{
         @apply gap-0
+    }
+
+    .search-bars{
+        @apply h-10
+    }
+
+    .search-btn{
+        @apply mt-2.5
+    }
+
+    .search-animal,
+    .search-zip{
+        @apply w-40 text-xs
+    }
+
+    .title{
+        @apply text-lg text-center
+    }
+
+    .sub-title{
+        @apply text-sm
     }
 
 }
