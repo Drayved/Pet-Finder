@@ -36,9 +36,6 @@ export default function PetSearch({type}) {
       if (zipCode) {
         endpoint += `&location=${zipCode}`;
       }
-      // if(type){
-      //   endpoint += `&type=${type}`
-      // }
       const petResults = await fetch(endpoint, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -52,10 +49,11 @@ export default function PetSearch({type}) {
       
       setResults(json.animals);
       setIsLoading(false)
+      
+      localStorage.setItem("results", JSON.stringify(json.animals));
     };
     fetchPets();
   }, [accessToken, locationPermission, type, zipCode]);
-
 
   if (results === null) return <Location onLocationReceived={onLocationReceived} locationPermission={locationPermission} zipCode={zipCode}/>
 

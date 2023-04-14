@@ -1,22 +1,27 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../App";
 import { useParams } from "react-router-dom";
 import PictureCarousel from "../components/PictureCarousel";
 import PetCards from "../components/PetCards";
 
 export default function Animal() {
-  const { results, filteredResults } = useContext(AuthContext);
+  const { results } = useContext(AuthContext);
   const { id } = useParams();
+
+  const storedResults = JSON.parse(localStorage.getItem("results"));
+  const [filteredResults, setFilteredResults] = useState(storedResults || []);
 
   const pets = filteredResults.length > 0 ? filteredResults : results;
   const animal = pets.find((pet) => pet.id.toString() === id.toString());
+
+  
 
   if (!animal) {
     return <div>Animal not found</div>;
   }
 
-  function handleSponsorClick(){
-    alert(`Thank you for sponsoring ${animal.name}`)
+  function handleSponsorClick() {
+    alert(`Thank you for sponsoring ${animal.name}`);
   }
 
   return (
