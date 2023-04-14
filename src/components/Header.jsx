@@ -35,7 +35,6 @@ export default function Header() {
     
       if (zipCode && zipCode.length === 5) {
         navigate(`/search/${search} || ?location=${zipCode}`);
-        
       } else {
         navigate(`/search/${search}`);
       }

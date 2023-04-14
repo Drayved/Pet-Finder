@@ -9,6 +9,9 @@ export default function PetCards({ num1, num2 }){
     
     const pets = filteredResults.length > 0 ? filteredResults : results
     
+    const location = JSON.parse(localStorage.getItem("location"))
+    const zipCode = localStorage.getItem("zipCode")
+
     return(
       <div className="animal-list">
         {Array.isArray(pets) &&
@@ -33,7 +36,13 @@ export default function PetCards({ num1, num2 }){
                       {animal.age} - <span>{animal.breeds.primary}</span>
                     </p>
                     <p className="text-sm">{animal.contact.address.city + ", " + animal.contact.address.state} </p>
-                    <p className="text-sm">{animal.distance.toFixed(0) === 1 ? "mile away" : animal.distance.toFixed(0) + " miles away"}</p>
+                    {animal.distance ? (
+                    <p className="text-sm">
+                      {animal.distance.toFixed(1) === 1
+                        ? "mile away"
+                        : animal.distance.toFixed(1) + " miles away"}
+                    </p>
+                    ) : null}
                   </div>
                 </div>
               </Link>

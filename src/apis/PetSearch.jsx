@@ -15,13 +15,14 @@ export default function PetSearch({type}) {
 
   const onLocationReceived = (location) => {
     setLocationPermission(location);
-    console.log(location)
+    localStorage.setItem("location", JSON.stringify(location))
   };  
   
 
   
 
   useEffect(() => {
+
     const fetchPets = async () => {
       if (accessToken === null) return;
       setIsLoading(true)
