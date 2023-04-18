@@ -118,7 +118,7 @@ select:focus{
 
 /* Middle banner */
 .mid-container{
-    @apply bg-purple-800 text-[#edffec] py-6 flex flex-col justify-center ;
+    @apply bg-purple-800 text-[#edffec] py-6 flex flex-col justify-center;
     
 }
 
@@ -201,6 +201,16 @@ select:focus{
 
 }
 
+@media(max-width: 360px){
+    .search-zip{
+        @apply w-[140px] 
+    }
+
+    .search-animal{
+        @apply w-[150px]
+    }
+}
+
 @media(max-width: 400px){
     .animal-cards{
         @apply w-[140px]
@@ -209,9 +219,37 @@ select:focus{
     .animal-card-text{
         @apply text-xs
     }
+
+    .mid-container{
+        @apply w-[100%]
+    }
+
+    .mid-text{
+        @apply w-[80%] mx-auto
+    }
+
+    .search-bars{
+        @apply w-[99%]
+    }
+
+    .search-btn{
+        @apply w-1
+    }
 }
 
-@media(min-width: 767px){
+@media(max-width: 850px){
+    .mid-container{
+        @apply mx-[170px]
+    }
+}
+
+@media(max-width: 768px){
+    .mid-container{
+        @apply mx-0
+    }
+}
+
+@media(min-width: 768px){
     .mid-container{
         @apply text-center flex flex-row 
     }
