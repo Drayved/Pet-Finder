@@ -2,19 +2,20 @@ import React, { useContext } from "react";
 import { AuthContext } from "../App";
 import { Link } from "react-router-dom";
 
-export default function PetCards({ num1, num2 }){
-    const {results, setResults, filteredResults} = useContext(AuthContext)
-    const pets = filteredResults.length > 0 ? filteredResults : results
+export default function PetCards({ num1, num2, pets, onFavoritesPage, handleRemoveFavorite }) {
+  const {results, setResults, filteredResults} = useContext(AuthContext);
+  const filteredPets = onFavoritesPage ? pets : (filteredResults.length > 0 ? filteredResults : results);
 
-    return(
-      <div className="animal-list">
-        {Array.isArray(pets) &&
-          pets
-            .filter((animal) => animal.photos.length > 0)
-            .slice(num1, num2)
-            .map((animal) => (
-              <Link key={animal.id} to={`/animal/${animal.id}`}>
-                <div className="animal-cards" key={animal.id}>
+  return (
+    <div className="animal-list">
+      {Array.isArray(filteredPets) &&
+        filteredPets
+          .filter((animal) => animal.photos.length > 0)
+          .slice(num1, num2)
+          .map((animal) => (
+            <div key={animal.id}>
+              <Link to={`/animal/${animal.id}`}>
+                <div className="animal-cards">
                   <img
                     className="animal-img"
                     src={animal.photos.length ? animal.photos[0].medium : ""}
@@ -22,26 +23,30 @@ export default function PetCards({ num1, num2 }){
                   />
                   <div className="animal-card-text">
                     <h2 className="font-bold">
-                      {animal.name.length > 20
-                        ? animal.name.slice(0, 20) + "..."
-                        : animal.name}
+                      {animal.name.length > 20 ? animal.name.slice(0, 20) + "..." : animal.name}
                     </h2>
                     <p className="text-sm animal-text">
                       {animal.age} - <span>{animal.breeds.primary}</span>
                     </p>
-                    <p className="text-sm animal-text">{animal.contact.address.city + ", " + animal.contact.address.state} </p>
-                    {animal.distance ? (
                     <p className="text-sm animal-text">
-                      {animal.distance.toFixed(1) === 1
-                        ? "mile away"
-                        : animal.distance.toFixed(1) + " miles away"}
+                      {animal.contact.address.city + ", " + animal.contact.address.state}
                     </p>
+                    {animal.distance ? (
+                      <p className="text-sm animal-text">
+                        {animal.distance.toFixed(1) === 1 ? "mile away" : animal.distance.toFixed(1) + " miles away"}
+                      </p>
                     ) : null}
                   </div>
                 </div>
               </Link>
-            ))}
-      </div>
-    )
+              {onFavoritesPage && (
+                <div className="flex justify-center">
+                  <button className="remove-favorite"
+                   onClick={() => handleRemoveFavorite(animal.id)}>Remove from favorites</button>
+                </div>
+              )}
+            </div>
+          ))}
+    </div>
+  );
 }
-

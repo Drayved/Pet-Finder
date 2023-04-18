@@ -88,7 +88,7 @@ select:focus{
 }
 
 .animal-btn:hover{
-    @apply text-[1.2em] text-green-500
+    @apply  text-green-500
 }
 
 .animal-list{
@@ -117,6 +117,14 @@ select:focus{
 
 .animal-card-text{
     @apply text-center
+}
+
+.remove-favorite{
+    
+}
+
+.remove-favorite:hover{
+    @apply text-purple-800 
 }
 
 .arrows-container{
@@ -226,6 +234,10 @@ select:focus{
         @apply w-screen
     }
 
+    .animal-text{
+        @apply text-xs
+    }
+
 }
 
 @media(max-width: 360px){
@@ -267,9 +279,7 @@ select:focus{
         @apply h-[260px]
     }
 
-    .animal-text{
-        @apply text-xs
-    }
+
 }
 
 @media(max-width: 850px){
