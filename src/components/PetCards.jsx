@@ -42,7 +42,7 @@ export default function PetCards({ num1, num2, pets, onFavoritesPage, handleRemo
               {onFavoritesPage && (
                 <div className="flex justify-center">
                   <button className="remove-favorite"
-                   onClick={() => handleRemoveFavorite(animal.id)}>Remove from favorites</button>
+                   onClick={() => handleRemoveFavorite(animal.id)}>Remove</button>
                 </div>
               )}
             </div>
