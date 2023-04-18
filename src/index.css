@@ -169,7 +169,7 @@ select:focus{
     }
 
     .animal-details{
-        @apply w-[90%]
+        @apply w-[90%] mx-auto
     }
 
 
@@ -234,14 +234,12 @@ select:focus{
         @apply w-[80%] mx-auto
     }
 
-
-
     .search-btn{
-        @apply w-8
+        @apply w-8 
     }
 
     .adoption-details{
-        @apply w-[90%]
+        @apply w-[90%] mx-auto
     }
 }
 
