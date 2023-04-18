@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams, useLocation, Link } from "react-router-dom";
 import SearchResults from "../pages/SearchResults";
 import { AuthContext } from "../App";
 
@@ -55,6 +55,10 @@ export default function Header() {
             We have over 11,500 pets from shelters and rescues
           </h3>
         </div>
+        <h4 className="app-name">
+        <Link to="/">PetFinder</Link>
+        </h4>
+        <p className="favorites-btn">Favorites</p>
         <form className="search-bars" onSubmit={handleFormSubmit}>
           <div className="search-animal-container">
             <input

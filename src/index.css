@@ -17,12 +17,20 @@ body{
 
 }
 
+.app-name{
+    @apply absolute top-7 left-2 mt-0.5
+}
+
 .title{
     @apply mt-7 text-2xl 
 }
 
 .sub-title{
    @apply  mb-[1em] italic 
+}
+
+.favorites-btn{
+    @apply absolute top-7 right-2 text-sm mt-0.5
 }
 
 /* Search */
@@ -170,6 +178,10 @@ select:focus{
 
     .animal-details{
         @apply w-[90%] mx-auto
+    }
+
+    .animal-cards{
+        @apply h-[300px]
     }
 
 
