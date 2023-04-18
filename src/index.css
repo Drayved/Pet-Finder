@@ -262,6 +262,10 @@ select:focus{
     .adoption-details{
         @apply w-[90%] mx-auto
     }
+
+    .animal-cards{
+        @apply h-[260px]
+    }
 }
 
 @media(max-width: 850px){
