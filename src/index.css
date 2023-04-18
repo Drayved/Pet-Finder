@@ -234,12 +234,10 @@ select:focus{
         @apply w-[80%] mx-auto
     }
 
-    .search-bars{
-        @apply w-[99%]
-    }
+
 
     .search-btn{
-        @apply w-1
+        @apply w-8
     }
 
     .adoption-details{
