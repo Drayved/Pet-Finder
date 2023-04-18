@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-100 text-[black] m-0 p-0;
+    @apply bg-gray-100 text-[black] m-0 p-0 ;
     font-family: 'Mukta', sans-serif;
 }
 
 .navbar{
-    @apply bg-[#5a5766] p-1 text-[#edffec] w-screen
+    @apply bg-[#5a5766] py-1 text-[#edffec] 
 }
 
 .top-info{
     @apply flex justify-center flex-col items-center text-center;
-    @apply bg-purple-800 text-[#edffec] w-screen
+    @apply bg-purple-800 text-[#edffec] 
 
 }
 
@@ -84,28 +84,36 @@ select:focus{
 }
 
 .animal-list{
-    @apply flex flex-wrap gap-16 my-[5rem] mx-auto justify-center
+    @apply flex flex-wrap gap-12 my-[5rem] justify-center 
 }
 
 
 .animal-cards{
     @apply bg-gray-200 shadow-lg shadow-[#48435c] text-[#48435c];
-    @apply  p-0 w-[250px] h-[400px] 
+    @apply  p-0 w-[230px] h-[400px] 
 }
 
 .animal-cards:hover{
     @apply cursor-pointer border-2 border-purple-800
 }
 
-.cat-list{
-    @apply my-[15rem]
-}
 
 .animal-img {
     @apply mx-auto h-[75%] w-full overflow-hidden relative;
     
-  }
+}
   
+.arrow-button{
+    @apply text-2xl 
+}
+
+.animal-card-text{
+    @apply text-center
+}
+
+.arrows-container{
+    @apply flex justify-around mt-3
+}
 
 
 /* Middle banner */
@@ -115,7 +123,7 @@ select:focus{
 }
 
 .mid-banner{
-    @apply text-center ;
+    @apply text-center;
 }
 
 .mid-title{
@@ -138,20 +146,8 @@ select:focus{
     @apply bg-green-600
 }
 
-.arrows-container{
-    @apply flex justify-around mt-3
-}
-
-.arrow-button{
-    @apply text-2xl 
-}
-
-.animal-card-text{
-    @apply text-center
-}
-
 .footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3  bottom-0 w-screen
+    @apply  bg-purple-800 text-center text-[#edffec] py-3  bottom-0 
 }
 
 .adopt-btns:hover{
@@ -217,16 +213,16 @@ select:focus{
 
 @media(min-width: 767px){
     .mid-container{
-        @apply text-center flex flex-row
+        @apply text-center flex flex-row 
     }
     .mid-banner{
-        @apply text-center mx-[5%]
+        @apply text-center mx-[5%] 
     }
     .mid-btns{
         @apply  w-40 
     }
     .row-container{
-        @apply  w-screen bg-purple-800 pt-5
+        @apply   bg-purple-800 pt-5
     }
 
     .mid-text{
