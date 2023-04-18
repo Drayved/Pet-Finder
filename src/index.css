@@ -167,6 +167,12 @@ select:focus{
     .search-zip{
         @apply w-56
     }
+
+    .animal-details{
+        @apply w-[90%]
+    }
+
+
 }
 
 @media(max-width: 485px){
@@ -234,6 +240,10 @@ select:focus{
 
     .search-btn{
         @apply w-1
+    }
+
+    .adoption-details{
+        @apply w-[90%]
     }
 }
 

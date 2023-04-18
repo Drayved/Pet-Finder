@@ -30,7 +30,7 @@ export default function Animal() {
         <div>
           <PictureCarousel photos={animal.photos} />
           <div className="flex flex-col md:flex-row justify-center">
-            <div className="border rounded-md mt-10 w-[600px] pl-5 ml-6 py-5">
+            <div className="border rounded-md mt-10 w-[600px] pl-5 ml-6 py-5 animal-details">
               <h2 className="text-3xl font-bold mb-4 ">{animal.name}</h2>
               <div className="flex flex-col mt-4 ">
                 <p className="text-med my-5 font-semibold">
@@ -48,14 +48,14 @@ export default function Animal() {
                 {animal.description && (
                   <>
                     <h2 className="text-2xl border-t mr-5 pt-2 font-bold">Meet {animal.name}</h2>
-                    <p className="text-sm mt-4 w-[550px]">
+                    <p className="text-sm mt-4 w-[90%] flex-wrap">
                       {animal.description}
                     </p>
                   </>
                 )}
               </div>
             </div>
-            <div className="flex flex-col mt-10 ml-10 border rounded-lg bg-purple-800 text-white h-72 w-[360px] relative">
+            <div className="flex flex-col mt-10 ml-6 border rounded-lg bg-purple-800 text-white h-72 w-[360px] relative adoption-details">
               <h2 className="font-bold mt-6 text-center text-xl px-5">Considering {animal.name} for adoption?</h2>
               <button className="adopt-btns py-1.5 border-2 border-white rounded-3xl mt-7 bg-white text-purple-800 font-semibold w-[80%] mx-auto" onClick={() => window.location.href="https://www.petfinder.com/user/login/?next=https%3A%2F%2Fwww.petfinder.com%2Fcat%2Fcrenshaw-62131540%2Fky%2Fnewport%2Fstray-animal-adoption-program-ky64%2Fstart-your-inquiry%2F%3FhasUserSkippedQuiz%3Dtrue"}>Start Your Inquiry</button>
               <button className="font-semibold adopt-btns py-1.5 border-2 rounded-3xl mt-4 w-[80%] mx-auto" onClick={() => window.location.href="https://www.petfinder.com/cat/crenshaw-62131540/ky/newport/stray-animal-adoption-program-ky64/faq/"}>READ FAQS</button>

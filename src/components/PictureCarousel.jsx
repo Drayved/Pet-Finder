@@ -9,7 +9,7 @@ export default function PictureCarousel({ photos }) {
   const showArrows = photos.length > 1;
 
   return (
-    <div className="relative flex justify-center bg-[#050307] w-screen overflow-hidden">
+    <div className="relative flex justify-center bg-[#050307] w-[100%] overflow-hidden">
 
       {showArrows && (
         <img
