@@ -59,7 +59,7 @@ export default function Animal() {
               <h2 className="font-bold mt-6 text-center text-xl px-5">Considering {animal.name} for adoption?</h2>
               <button className="adopt-btns py-1.5 border-2 border-white rounded-3xl mt-7 bg-white text-purple-800 font-semibold w-[80%] mx-auto" onClick={() => window.location.href="https://www.petfinder.com/user/login/?next=https%3A%2F%2Fwww.petfinder.com%2Fcat%2Fcrenshaw-62131540%2Fky%2Fnewport%2Fstray-animal-adoption-program-ky64%2Fstart-your-inquiry%2F%3FhasUserSkippedQuiz%3Dtrue"}>Start Your Inquiry</button>
               <button className="font-semibold adopt-btns py-1.5 border-2 rounded-3xl mt-4 w-[80%] mx-auto" onClick={() => window.location.href="https://www.petfinder.com/cat/crenshaw-62131540/ky/newport/stray-animal-adoption-program-ky64/faq/"}>READ FAQS</button>
-              <div className="border border-black flex justify-between absolute bottom-0 w-full ">
+              <div className="border-t border-black flex justify-between absolute bottom-0 w-full ">
                 <button className="font-semibold adopt-btns mx-auto border-r border-black w-[100%] py-3" onClick={handleSponsorClick} >SPONSOR</button>
                 <button className="font-semibold adopt-btns mx-auto w-[100%] py-1.5">FAVORITE</button>
               </div>

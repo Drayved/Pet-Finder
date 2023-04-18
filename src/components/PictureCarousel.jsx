@@ -26,7 +26,7 @@ export default function PictureCarousel({ photos }) {
             src={photo.medium}
             alt={`Animal ${i + 1}`}
             style={{ display: i === index ? "inline-block" : "none", margin: 0 }}
-            className="h-96 w-[100%]"
+            className="h-96 w-[100%] current-image"
           />
         ))}
 

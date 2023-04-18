@@ -205,6 +205,15 @@ select:focus{
         @apply text-sm
     }
 
+    .prev-image,
+    .next-image{
+        @apply hidden
+    }
+
+    .current-image{
+        @apply w-screen
+    }
+
 }
 
 @media(max-width: 360px){
