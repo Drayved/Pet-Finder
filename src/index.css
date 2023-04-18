@@ -116,11 +116,7 @@ select:focus{
 }
 
 .animal-card-text{
-    @apply text-center
-}
-
-.remove-favorite{
-    
+    @apply text-center px-1
 }
 
 .remove-favorite:hover{
@@ -276,7 +272,11 @@ select:focus{
     }
 
     .animal-cards{
-        @apply h-[260px]
+        @apply h-[270px]
+    }
+
+    .animal-img{
+        @apply h-[70%]
     }
 
 

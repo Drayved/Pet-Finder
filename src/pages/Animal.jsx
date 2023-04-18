@@ -14,7 +14,7 @@ export default function Animal() {
   const pets = filteredResults.length > 0 ? filteredResults : results;
   const animal = pets.find((pet) => pet.id.toString() === id.toString());
 
-  
+  window.scrollTo(0, 0)
 
   if (!animal) {
     return <div>Animal not found</div>;
