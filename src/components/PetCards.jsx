@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function PetCards({ num1, num2 }){
     const {results, setResults, filteredResults} = useContext(AuthContext)
-    
-    console.log(filteredResults)
-    
     const pets = filteredResults.length > 0 ? filteredResults : results
-    
-    const location = JSON.parse(localStorage.getItem("location"))
-    const zipCode = localStorage.getItem("zipCode")
 
     return(
       <div className="animal-list">
@@ -32,12 +26,12 @@ export default function PetCards({ num1, num2 }){
                         ? animal.name.slice(0, 20) + "..."
                         : animal.name}
                     </h2>
-                    <p>
+                    <p className="text-sm animal-text">
                       {animal.age} - <span>{animal.breeds.primary}</span>
                     </p>
-                    <p className="text-sm">{animal.contact.address.city + ", " + animal.contact.address.state} </p>
+                    <p className="text-sm animal-text">{animal.contact.address.city + ", " + animal.contact.address.state} </p>
                     {animal.distance ? (
-                    <p className="text-sm">
+                    <p className="text-sm animal-text">
                       {animal.distance.toFixed(1) === 1
                         ? "mile away"
                         : animal.distance.toFixed(1) + " miles away"}

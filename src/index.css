@@ -266,6 +266,10 @@ select:focus{
     .animal-cards{
         @apply h-[260px]
     }
+
+    .animal-text{
+        @apply text-xs
+    }
 }
 
 @media(max-width: 850px){

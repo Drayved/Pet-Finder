@@ -9,6 +9,7 @@ import Horses from "./pages/Horses"
 import SearchResults from "./pages/SearchResults";
 import PetSearch from "./apis/PetSearch";
 import Animal from "./pages/Animal";
+import Favorites from "./pages/Favorites";
 // export const apiKey = "op6A9muTJtyZ46FXgiji8TTFXZAfC9KxMWKswrW7fkLWo6oiJV"
 // export const apiSecret = "rIOVTAOjW46EZN52E8GcLNR4h9wBPWVYkyFp8AL4"
 // export const apiKey = "hIZLptHNbS2CL9HzCkMRWZ3ATzJYwIa6r3oEfIoKJXgo14GGyq"
@@ -54,6 +55,7 @@ function App() {
       <Route path="horses" element={<Horses />}/>
       <Route path="search/:query" element={<SearchResults/>} />
       <Route path="animal/:id" element={<Animal />} />
+      <Route path="favorites" element={<Favorites />} />
       
     </Route>
 

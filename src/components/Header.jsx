@@ -56,9 +56,11 @@ export default function Header() {
           </h3>
         </div>
         <h4 className="app-name">
-        <Link to="/">PetFinder</Link>
+          <Link to="/">PetFinder</Link>
         </h4>
-        <p className="favorites-btn">Favorites</p>
+        <h4 className="favorites-btn">
+          <Link to="/favorites">Favorites</Link>
+        </h4>
         <form className="search-bars" onSubmit={handleFormSubmit}>
           <div className="search-animal-container">
             <input
