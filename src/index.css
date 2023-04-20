@@ -14,13 +14,11 @@ body{
     @apply bg-gray-600 py-1 text-[#edffec];
 }
 
-
 .animal-btns {
     @apply flex justify-around ;
 }
 
-.animal-btn:hover,
-.app-title:hover{
+.animal-btn:hover{
     @apply  text-purple-600
 }
 
@@ -220,13 +218,10 @@ select:focus{
         @apply block text-xs 
     }
 
-    .menu-icon{
-        
-    }
-
     .navbar-icon {
       @apply block
     }
+
     .navbar-icon{
         @apply flex justify-end w-[30px] h-[5px] my-[3px] mr-3 bg-gray-900;
         @apply cursor-pointer 
@@ -251,7 +246,12 @@ select:focus{
     }
 
     .app-title{
-        @apply ml-3 my-auto
+        @apply ml-3 my-auto text-purple-600 font-bold;
+        
+    }
+
+    .app-title:hover{
+        @apply text-purple-700
     }
     
     .hide-on-mobile{
