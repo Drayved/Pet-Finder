@@ -6,8 +6,8 @@ import Dogs from "./pages/Dogs"
 import Cats from "./pages/Cats"
 import Birds from "./pages/Birds"
 import Horses from "./pages/Horses"
+import Rabbits from "./pages/Rabbits"
 import SearchResults from "./pages/SearchResults";
-import PetSearch from "./apis/PetSearch";
 import Animal from "./pages/Animal";
 import Favorites from "./pages/Favorites";
 // export const apiKey = "op6A9muTJtyZ46FXgiji8TTFXZAfC9KxMWKswrW7fkLWo6oiJV"
@@ -53,6 +53,7 @@ function App() {
       <Route path="cats" element={<Cats />}/>
       <Route path="birds" element={<Birds />}/>
       <Route path="horses" element={<Horses />}/>
+      <Route path="rabbits" element={<Rabbits />}/>
       <Route path="search/:query" element={<SearchResults/>} />
       <Route path="animal/:id" element={<Animal />} />
       <Route path="favorites" element={<Favorites />} />

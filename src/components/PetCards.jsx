@@ -25,26 +25,29 @@ export default function PetCards({ num1, num2, pets, onFavoritesPage, handleRemo
                     <h2 className="font-bold">
                       {animal.name.length > 20 ? animal.name.slice(0, 20) + "..." : animal.name}
                     </h2>
-                    <p className="text-sm animal-text">
+                    <p className="text-xs animal-text">
                       {animal.age} - <span>{animal.breeds.primary}</span>
                     </p>
-                    <p className="text-sm animal-text">
+                    <p className="text-xs animal-text">
                       {animal.contact.address.city + ", " + animal.contact.address.state}
                     </p>
                     {animal.distance ? (
-                      <p className="text-sm animal-text">
+                      <p className="text-xs animal-text">
                         {animal.distance.toFixed(1) === 1 ? "mile away" : animal.distance.toFixed(1) + " miles away"}
                       </p>
+                      
                     ) : null}
+                    {onFavoritesPage && (
+                <div className="flex justify-center">
+                  <button className="remove-favorite"
+                   onClick={(e) => {e.preventDefault(), handleRemoveFavorite(animal.id)}}>Remove
+                   </button>
+                </div>
+              )}
                   </div>
                 </div>
               </Link>
-              {onFavoritesPage && (
-                <div className="flex justify-center">
-                  <button className="remove-favorite"
-                   onClick={() => handleRemoveFavorite(animal.id)}>Remove</button>
-                </div>
-              )}
+              
             </div>
           ))}
     </div>

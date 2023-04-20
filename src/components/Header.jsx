@@ -55,12 +55,6 @@ export default function Header() {
             We have over 11,500 pets from shelters and rescues
           </h3>
         </div>
-        <h4 className="app-name">
-          <Link to="/">PetFinder</Link>
-        </h4>
-        <h4 className="favorites-btn">
-          <Link to="/favorites">Favorites</Link>
-        </h4>
         <form className="search-bars" onSubmit={handleFormSubmit}>
           <div className="search-animal-container">
             <input
@@ -83,7 +77,12 @@ export default function Header() {
             
             
           </div>
-          <button className="search-btn" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+          <button 
+            className="search-btn" 
+            type="submit"><i 
+            class="fa fa-search fa-lg" 
+            aria-hidden="true"></i>
+          </button>
           
           
         </form>

@@ -3,22 +3,34 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-100 text-[black] m-0 p-0 ;
+    @apply bg-gray-200 text-[black] m-0 p-0 ;
     font-family: 'Mukta', sans-serif;
 }
 
+/* navbar */
+
+
 .navbar{
-    @apply bg-[#5a5766] py-1 text-[#edffec] 
+    @apply bg-gray-600 py-1 text-[#edffec];
 }
+
+
+.animal-btns {
+    @apply flex justify-around ;
+}
+
+.animal-btn:hover,
+.app-title:hover{
+    @apply  text-purple-600
+}
+
+
+/* Header */
 
 .top-info{
     @apply flex justify-center flex-col items-center text-center;
-    @apply bg-purple-800 text-[#edffec] 
+    @apply bg-hero text-[#edffec]  bg-no-repeat bg-cover bg-center h-[30%]
 
-}
-
-.app-name{
-    @apply absolute top-7 left-2 mt-0.5
 }
 
 .title{
@@ -27,6 +39,11 @@ body{
 
 .sub-title{
    @apply  mb-[1em] italic 
+}
+
+.title,
+.sub-title{
+    text-shadow: 0 1px 10px #4d4751, 0 0 4px #4d4751;
 }
 
 .favorites-btn{
@@ -73,8 +90,9 @@ select:focus{
 }
 
 .search-btn{
-    @apply bg-gray-100 text-black   border-purple-700 pr-3 my-4 mr-1.5 border-none;
-}
+    @apply bg-gray-100 text-black px-2 my-auto mr-1.5 bg-purple-700 py-2 text-white border rounded-md;
+    @apply flex justify-center align-middle
+}   
 
 .search-btn:hover,
 .search0btn:focus{
@@ -83,13 +101,7 @@ select:focus{
 
 /* animal list */
 
-.animal-btns {
-    @apply flex justify-around  ;
-}
 
-.animal-btn:hover{
-    @apply  text-green-500
-}
 
 .animal-list{
     @apply flex flex-wrap gap-12 my-[5rem] justify-center 
@@ -97,7 +109,7 @@ select:focus{
 
 
 .animal-cards{
-    @apply bg-gray-200 shadow-lg shadow-[#48435c] text-[#48435c];
+    @apply bg-gray-200 shadow-lg shadow-[#3d355e] text-[#48435c];
     @apply  p-0 w-[230px] h-[400px] 
 }
 
@@ -119,6 +131,10 @@ select:focus{
     @apply text-center px-2
 }
 
+.remove-favorite{
+    @apply font-bold
+}
+
 .remove-favorite:hover{
     @apply text-purple-800 
 }
@@ -129,8 +145,10 @@ select:focus{
 
 
 /* Middle banner */
+
 .mid-container{
-    @apply bg-purple-800 text-[#edffec] py-6 flex flex-col justify-center;
+    @apply  py-6 flex flex-col justify-center bg-gray-100;
+    box-shadow: 0 1px 3px rgba(77,71,81,0.2);
     
 }
 
@@ -139,11 +157,11 @@ select:focus{
 }
 
 .mid-title{
-    @apply text-2xl font-bold text-center text-green-500
+    @apply text-2xl text-center
 }
 
 .mid-titles{
-    @apply text-xl font-bold mb-4 
+    @apply text-xl font-bold mb-4 text-[#004c81;]
 }
 
 .mid-text{
@@ -151,11 +169,11 @@ select:focus{
 }
 
 .mid-btns {
-    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-green-600;
+    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-[#20ccf8];
 }
 
 .mid-btns:hover{
-    @apply bg-green-600
+    @apply bg-[#20ccf8]
 }
 
 .footer{
@@ -165,6 +183,8 @@ select:focus{
 .adopt-btns:hover{
     @apply bg-[#370c52] text-white border-none
 }
+
+/* Media */
 
 @media(max-width: 680px){
     .animal-cards{
@@ -185,10 +205,69 @@ select:focus{
     }
 
     .animal-cards{
-        @apply h-[300px]
+        @apply h-[350px]
     }
 
 
+}
+
+@media (max-width: 600px) {
+    .animal-btns {
+      @apply hidden
+    }
+    
+    .animal-btns.open{
+        @apply block text-xs 
+    }
+
+    .menu-icon{
+        
+    }
+
+    .navbar-icon {
+      @apply block
+    }
+    .navbar-icon{
+        @apply flex justify-end w-[30px] h-[5px] my-[3px] mr-3 bg-gray-900;
+        @apply cursor-pointer 
+    
+    }
+
+    .navbar{
+        @apply flex justify-between h-9
+    }
+
+    .menu-icon{
+        @apply absolute right-0;
+    }
+
+    ul{
+        @apply mt-7 mr-1 z-50
+    }
+
+    li{
+        @apply bg-transparent bg-gray-700 p-1.5 z-auto;
+        
+    }
+
+    .app-title{
+        @apply ml-3 my-auto
+    }
+    
+    .hide-on-mobile{
+        @apply hidden
+    }
+
+    .animal-btn{
+        
+    }
+    
+  }
+
+@media (min-width: 600px){
+    .app-title{
+        @apply hidden
+    }
 }
 
 @media(max-width: 485px){
@@ -202,10 +281,6 @@ select:focus{
 
     .search-bars{
         @apply h-10
-    }
-
-    .search-btn{
-        @apply mt-2.5
     }
 
     .search-animal,
@@ -296,7 +371,8 @@ select:focus{
 
 @media(min-width: 768px){
     .mid-container{
-        @apply text-center flex flex-row 
+        @apply text-center flex flex-row border-none ;
+        box-shadow: none;
     }
     .mid-banner{
         @apply text-center mx-[5%] 
@@ -305,7 +381,8 @@ select:focus{
         @apply  w-40 
     }
     .row-container{
-        @apply   bg-purple-800 pt-5
+        @apply   pt-5 bg-gray-100;
+        box-shadow: 0 1px 3px rgba(77,71,81,0.2);
     }
 
     .mid-text{
