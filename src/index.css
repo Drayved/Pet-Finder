@@ -119,7 +119,7 @@ select:focus{
 
 
 .animal-img {
-    @apply mx-auto h-[75%] w-full overflow-hidden relative;
+    @apply mx-auto h-[70%] w-full overflow-hidden relative;
     
 }
   
