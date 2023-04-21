@@ -23,7 +23,7 @@ export default function NavBar() {
     
     </div>     
       <ul className={`animal-btns ${isMenuOpen ? "open" : ""}`}>
-        <li className="hide-on-mobile animal-btn text-purple-600 font-bold hover:text-purple-500">
+        <li className="hide-on-mobile animal-btn text-gray-100 font-bold hover:text-purple-400">
           <Link to="/">PetFinder</Link>
         </li>
         <li className="animal-btn">

@@ -13,6 +13,11 @@ window.scrollTo(0, 0)
   };
 
   return (
-    <PetCards pets={pets} onFavoritesPage={true} handleRemoveFavorite={handleRemoveFavorite} />
+    <>
+      {pets.length > 0 ? 
+      <PetCards pets={pets} onFavoritesPage={true} handleRemoveFavorite={handleRemoveFavorite} />
+      : <h4 className="text-center py-4">No pets added to favorites</h4>}
+    </>
+    
   );
 }

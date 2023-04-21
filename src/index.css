@@ -11,7 +11,7 @@ body{
 
 
 .navbar{
-    @apply bg-gray-600 py-1 text-[#edffec];
+    @apply bg-purple-700 py-1 text-[#edffec];
 }
 
 .animal-btns {
@@ -19,7 +19,7 @@ body{
 }
 
 .animal-btn:hover{
-    @apply  text-purple-600
+    @apply  text-purple-400
 }
 
 
@@ -94,7 +94,7 @@ select:focus{
 
 .search-btn:hover,
 .search0btn:focus{
-    @apply scale-125 
+    @apply border-purple-900 
 }
 
 /* animal list */
@@ -261,17 +261,26 @@ select:focus{
     }
 
     .navbar-icon{
-        @apply flex justify-end w-[30px] h-[5px] my-[3px] mr-3 bg-gray-900;
-        @apply cursor-pointer 
+        @apply flex justify-end w-[28px] h-[4px] my-[4px] mr-3 bg-gray-100;
+        @apply cursor-pointer;
+        box-shadow: 0 2px 1px rgba(5, 5, 5, 0.2);
     
     }
+
+    .menu-icon:hover span, 
+    .menu-icon:hover span:nth-child(2), 
+    .menu-icon:hover span:nth-child(3){
+        @apply bg-purple-400
+      }
+      
+
 
     .navbar{
         @apply flex justify-between h-9
     }
 
     .menu-icon{
-        @apply absolute right-0;
+        @apply absolute right-0 p-0 cursor-pointer m-0;
     }
 
     ul{
@@ -279,17 +288,17 @@ select:focus{
     }
 
     li{
-        @apply bg-transparent bg-gray-700 p-1.5 z-auto;
+        @apply bg-transparent bg-purple-700 p-1.5 z-auto;
         
     }
 
     .app-title{
-        @apply ml-3 my-auto text-purple-600 font-bold;
+        @apply ml-3 my-auto text-gray-100 font-bold;
         
     }
 
     .app-title:hover{
-        @apply text-purple-700
+        @apply text-purple-400
     }
     
     .hide-on-mobile{
@@ -340,7 +349,7 @@ select:focus{
 
 @media(max-width: 400px){
     .animal-cards{
-        @apply w-[140px]
+        @apply w-[145px]
     }
 
     .animal-card-text{
@@ -364,11 +373,11 @@ select:focus{
     }
 
     .animal-cards{
-        @apply h-[270px]
+        @apply h-[280px]
     }
 
     .animal-img{
-        @apply h-[70%]
+        @apply h-[65%]
     }
 
 

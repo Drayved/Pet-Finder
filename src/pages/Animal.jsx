@@ -13,12 +13,23 @@ export default function Animal() {
 
   const pets = filteredResults.length > 0 ? filteredResults : results;
   const animal = pets.find((pet) => pet.id.toString() === id.toString());
+  const [isFavorite, setIsFavorite] = useState(false)
 
-  window.scrollTo(0, 0)
+  
 
   if (!animal) {
     return <div>Animal not found</div>;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [animal.id])
+
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const existingFavorite = storedFavorites.find((favorite) => favorite.id === animal.id);
+    setIsFavorite(!!existingFavorite);
+  }, [animal]);
 
   function handleSponsorClick() {
     alert(`Thank you for sponsoring ${animal.name}`);
@@ -31,9 +42,14 @@ export default function Animal() {
     if (!existingFavorite) {
       storedFavorites.push(animal);
       localStorage.setItem("favorites", JSON.stringify(storedFavorites));
+    } else {
+      const newFavorites = storedFavorites.filter((favorite) => favorite.id !== animal.id);
+      localStorage.setItem("favorites", JSON.stringify(newFavorites));
     }
+  
+    setIsFavorite(!isFavorite);
   }
-
+  
   return (
     <div>
       {animal && animal.photos && (
@@ -71,7 +87,10 @@ export default function Animal() {
               <button className="font-semibold adopt-btns py-1.5 border-2 rounded-3xl mt-4 w-[80%] mx-auto" onClick={() => window.location.href="https://www.petfinder.com/cat/crenshaw-62131540/ky/newport/stray-animal-adoption-program-ky64/faq/"}>READ FAQS</button>
               <div className="border-t border-black flex justify-between absolute bottom-0 w-full ">
                 <button className="font-semibold adopt-btns mx-auto border-r border-black w-[100%] py-3" onClick={handleSponsorClick} >SPONSOR</button>
-                <button onClick={handleFavoriteClick} className="font-semibold adopt-btns mx-auto w-[100%] py-1.5">FAVORITE</button>
+                <button onClick={handleFavoriteClick} 
+                  className="font-semibold adopt-btns mx-auto w-[100%] py-1.5">
+                  {isFavorite ? "❤️ " : "🤍 "}FAVORITE
+                </button>
               </div>
             </div>
           </div>
