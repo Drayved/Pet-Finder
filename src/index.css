@@ -184,13 +184,51 @@ select:focus{
 
 /* Media */
 
+@media (min-width: 600px){
+    .app-title{
+        @apply hidden
+    }
+}
+
+
+@media(min-width: 768px){
+    .mid-container{
+        @apply text-center flex flex-row border-none ;
+        box-shadow: none;
+    }
+    .mid-banner{
+        @apply text-center mx-[5%] 
+    }
+    .mid-btns{
+        @apply  w-40 
+    }
+    .row-container{
+        @apply   pt-5 bg-gray-100;
+        box-shadow: 0 1px 3px rgba(77,71,81,0.2);
+    }
+
+    .mid-text{
+        @apply text-sm w-56 
+    }
+
+}
+
+@media(max-width: 850px){
+    .mid-container{
+        @apply mx-[170px]
+    }
+}
+
+@media(max-width: 768px){
+    .mid-container{
+        @apply mx-0
+    }
+}
+
+
 @media(max-width: 680px){
     .animal-cards{
         @apply w-[200px]
-    }
-
-    .animal-card-text{
-        @apply text-sm
     }
 
     .search-animal,
@@ -256,28 +294,15 @@ select:focus{
     
     .hide-on-mobile{
         @apply hidden
-    }
-
-    .animal-btn{
-        
-    }
-    
-  }
-
-@media (min-width: 600px){
-    .app-title{
-        @apply hidden
-    }
+    }    
 }
+
 
 @media(max-width: 485px){
     .animal-cards{
         @apply gap-0 w-[180px] ml-[-10px] mr-[-10px]
     }
 
-    .anima-list{
-        @apply gap-0
-    }
 
     .search-bars{
         @apply h-10
@@ -311,15 +336,7 @@ select:focus{
 
 }
 
-@media(max-width: 360px){
-    .search-zip{
-        @apply w-[140px] 
-    }
 
-    .search-animal{
-        @apply w-[150px]
-    }
-}
 
 @media(max-width: 400px){
     .animal-cards{
@@ -357,39 +374,20 @@ select:focus{
 
 }
 
-@media(max-width: 850px){
-    .mid-container{
-        @apply mx-[170px]
+@media(max-width: 360px){
+    .search-zip{
+        @apply w-[90%] 
+    }
+
+    .search-animal{
+        @apply w-[90%]
     }
 }
 
-@media(max-width: 768px){
-    .mid-container{
-        @apply mx-0
-    }
-}
 
-@media(min-width: 768px){
-    .mid-container{
-        @apply text-center flex flex-row border-none ;
-        box-shadow: none;
-    }
-    .mid-banner{
-        @apply text-center mx-[5%] 
-    }
-    .mid-btns{
-        @apply  w-40 
-    }
-    .row-container{
-        @apply   pt-5 bg-gray-100;
-        box-shadow: 0 1px 3px rgba(77,71,81,0.2);
-    }
 
-    .mid-text{
-        @apply text-sm w-56 
-    }
 
-}
+
 
 
 
