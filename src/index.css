@@ -141,6 +141,10 @@ select:focus{
     @apply flex justify-around mt-3
 }
 
+.animal-details{
+    box-shadow: px 0px 0px rgb(0, 0, 0)
+}
+
 
 /* Middle banner */
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PetCards from "../components/PetCards";
-import { Link } from "react-router-dom";
 
 export default function Favorites() {
 window.scrollTo(0, 0)

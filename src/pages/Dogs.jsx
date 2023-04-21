@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import { AuthContext } from "../App";
+import React from "react";
 import PetCards from "../components/PetCards";
 import PetSearch from "../apis/PetSearch";
 export default function Dogs(){

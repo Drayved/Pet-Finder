@@ -1,7 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../App";
-import NotFound from "./NotFound"
-import { useParams }from "react-router-dom"
 import PetCards from "../components/PetCards";
 import PetSearch from "../apis/PetSearch";
 
@@ -30,11 +28,9 @@ export default function SearchResults({ search }) {
   return (
     <>
       <PetSearch />
-      {filteredResults ? (
-        <PetCards data={filteredResults} />
-      ) : (
-        <NotFound />
-      )}
+      <PetCards data={filteredResults} />
+      
+      
     </>
   );
 }

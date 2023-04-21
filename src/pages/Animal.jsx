@@ -18,7 +18,7 @@ export default function Animal() {
   
 
   if (!animal) {
-    return <div>Animal not found</div>;
+    return <div className="text-center my-3">Animal not found</div>;
   }
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function Animal() {
         <div>
           <PictureCarousel photos={animal.photos} />
           <div className="flex flex-col md:flex-row justify-center">
-            <div className="border rounded-md mt-10 w-[600px] pl-5 ml-6 py-5 animal-details">
+            <div className="rounded-md mt-10 w-[600px] pl-5 ml-6 py-5 bg-slate-100 animal-details">
               <h2 className="text-3xl font-bold mb-4 ">{animal.name}</h2>
               <div className="flex flex-col mt-4 ">
                 <p className="text-med my-5 font-semibold">
