@@ -6,9 +6,11 @@ export default function NavBar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-
-    
   };
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <div className="navbar">
@@ -22,7 +24,7 @@ export default function NavBar() {
         <span className={`navbar-icon ${isMenuOpen ? "open" : ""}`}></span>
     
     </div>     
-      <ul className={`animal-btns ${isMenuOpen ? "open" : ""}`}>
+      <ul className={`animal-btns ${isMenuOpen ? "open" : ""}`} onClick={handleMenuClick }>
         <li className="hide-on-mobile animal-btn text-gray-100 font-bold hover:text-purple-400">
           <Link to="/">PetFinder</Link>
         </li>

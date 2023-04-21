@@ -380,7 +380,9 @@ select:focus{
         @apply h-[65%]
     }
 
-
+    .search-animal::placeholder{
+        @apply text-xs
+    }
 }
 
 @media(max-width: 360px){
