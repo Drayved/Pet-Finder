@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gray-200 text-[black] m-0 p-0 ;
+    @apply bg-gray-200 text-gray-500 m-0 p-0 ;
     font-family: 'Mukta', sans-serif;
 }
 
@@ -62,9 +62,8 @@ body{
 
 .search-zip-container,
 .search-animal-container{
-    @apply flex
+    @apply flex 
 }
-
 
 .search-animal::placeholder,
 .search-zip::placeholder{
@@ -120,10 +119,6 @@ select:focus{
     @apply mx-auto h-[70%] w-full overflow-hidden relative;
     
 }
-  
-.arrow-button{
-    @apply text-2xl 
-}
 
 .animal-card-text{
     @apply text-center px-2
@@ -137,10 +132,6 @@ select:focus{
     @apply text-purple-800 
 }
 
-.arrows-container{
-    @apply flex justify-around mt-3
-}
-
 .animal-details{
     box-shadow: px 0px 0px rgb(0, 0, 0)
 }
@@ -149,7 +140,7 @@ select:focus{
 /* Middle banner */
 
 .mid-container{
-    @apply  py-6 flex flex-col justify-center bg-gray-100;
+    @apply  flex flex-col justify-center bg-gray-100;
     box-shadow: 0 1px 3px rgba(77,71,81,0.2);
     
 }
@@ -159,23 +150,23 @@ select:focus{
 }
 
 .mid-title{
-    @apply text-2xl text-center
+    @apply text-2xl pt-12 text-center
 }
 
 .mid-titles{
-    @apply text-xl font-bold mb-4 text-[#004c81;]
+    @apply text-lg mt-10 text-[#004c81;]
 }
 
 .mid-text{
-    @apply  text-lg 
+    @apply  text-sm  w-[45%] mx-auto
 }
 
 .mid-btns {
-    @apply border-2 mt-6 rounded-3xl py-1 px-6 border-solid border-[#20ccf8];
+    @apply border-t mt-12 py-3 flex align-middle justify-center w-screen border-[#20ccf8] text-blue-900 font-semibold text-sm
 }
 
 .mid-btns:hover{
-    @apply bg-[#20ccf8]
+    @apply bg-[#20ccf8] text-white
 }
 
 .footer{
@@ -184,6 +175,22 @@ select:focus{
 
 .adopt-btns:hover{
     @apply bg-[#370c52] text-white border-none
+}
+
+.arrows-container{
+    @apply flex justify-between mt-[-20px]
+}
+
+.bubble {
+    @apply flex flex-row bg-gray-400 w-2 h-2 rounded-lg my-0 mx-1 cursor-pointer; 
+  }
+  
+.bubbles-container{
+    @apply flex justify-center mt-2
+}
+
+.active-bubble{
+    @apply bg-gray-800
 }
 
 /* Media */

@@ -43,53 +43,73 @@ export default function Landing() {
   }
 
   return (
+    
     <div>
       <PetSearch />
       <div>
         <PetCards num1={0} num2={6} />
         {showArrows ? (
+          <>
           <div className="mid-container">
             <h2 className="mid-title">Planning to Adopt a Pet?</h2>
             <div className="mid-banner">
               <div className="adoption-info-container">
                 <h4 className="mid-titles">{components[currentIndex].title}</h4>
                 <p className="mid-text">{components[currentIndex].text}</p>
-                <button onClick={() => window.location.href=components[currentIndex].url} className="mid-btns">
-                  Learn More
-                </button>
+                
               </div>
               <div className="arrows-container">
                 <button className="arrow-button" onClick={handlePrev}>
-                  ←
+                  <svg
+                    className="h-7 w-10 fill-current text-gray-500 -rotate-90 "
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path d="M10 0L0 10h3v10h14V10h3L10 0z" />
+                  </svg>
                 </button>
                 <button className="arrow-button" onClick={handleNext}>
-                  →
+                  <svg
+                    className="h-7 w-10 fill-current text-gray-500 rotate-90"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path d="M10 0L0 10h3v10h14V10h3L10 0z" />
+                  </svg>
                 </button>
               </div>
+              <button onClick={() => window.location.href = components[currentIndex].url} className="mid-btns">
+                LEARN MORE
+              </button>
             </div>
           </div>
+          <div className="bubbles-container">
+          {components.map((_, index) => (
+            <div
+              key={index}
+              className={`bubble w-8 ${index === currentIndex ? 'active-bubble' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
+        </>
         ) : (
-          
           <div className="row-container">
-             <h2 className="mid-title">Planning to Adopt a Pet?</h2>
+            <h2 className="mid-title">Planning to Adopt a Pet?</h2>
             <div className="mid-container">
-           
-            {components.map((component, index) => (
-              <div key={index} className="mid-banner">
-                
-                <h4 className="mid-titles">{component.title}</h4>
-                <p className="mid-text">{component.text}</p>
-                <button onClick={() => window.location.href=component.url} className="mid-btns">
-                  Learn More
-                </button>
-              </div>
-            ))}
+              {components.map((component, index) => (
+                <div key={index} className="mid-banner">
+                  <h4 className="mid-titles">{component.title}</h4>
+                  <p className="mid-text">{component.text}</p>
+                  <button onClick={() => window.location.href = component.url} className="mid-btns">
+                    Learn More
+                  </button>
+                </div>
+              ))}
             </div>
-            
           </div>
         )}
         <PetCards num1={5} num2={11} />
       </div>
     </div>
   );
+
 }

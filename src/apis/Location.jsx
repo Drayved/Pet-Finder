@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export default function Location({ onLocationReceived, zipCode}) {
+export default function Location({ onLocationReceived}) {
   
   useEffect(() => {
     if (navigator.geolocation) {
@@ -17,6 +17,7 @@ export default function Location({ onLocationReceived, zipCode}) {
     } else {
       alert("Geolocation is not supported by this browser.");
     }
+    
   }, []);
 
   return null;

@@ -51,7 +51,7 @@ export default function PictureCarousel({ photos }) {
       {showArrows && (
         <button
           onClick={() => setIndex(prevIndex)}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2"
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 arrow-btns"
         >
           <svg
             className="h-10 w-10 fill-current text-gray-500 -rotate-90 "
@@ -66,7 +66,7 @@ export default function PictureCarousel({ photos }) {
       {showArrows && (
         <button
           onClick={() => setIndex(nextIndex)}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2"
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 arrow-btns"
         >
           <svg
             className="h-10 w-10 fill-current text-gray-500 rotate-90"
