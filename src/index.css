@@ -107,7 +107,7 @@ select:focus{
 
 
 .animal-cards{
-    @apply bg-gray-200 shadow-lg shadow-[#3d355e] text-[#48435c];
+    @apply bg-gray-200 shadow-md shadow-[#29243f] text-[#48435c];
     @apply  p-0 w-[230px] h-[400px] 
 }
 
