@@ -35,9 +35,6 @@ export default function NavBar() {
           <Link to="cats">Cats</Link>
         </li>
         <li className="animal-btn">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="animal-btn">
           <Link to="horses">Horses</Link>
         </li>
         <li className="animal-btn">

@@ -50,7 +50,7 @@ export default function Landing() {
         <PetCards num1={0} num2={6} />
         {showArrows ? (
           <>
-          <div className="mid-container">
+          <div className="mid-container ">
             <h2 className="mid-title">Planning to Adopt a Pet?</h2>
             <div className="mid-banner">
               <div className="adoption-info-container">
@@ -59,7 +59,7 @@ export default function Landing() {
                 
               </div>
               <div className="arrows-container">
-                <button className="arrow-button" onClick={handlePrev}>
+                <button className="arrow-button " onClick={handlePrev}>
                   <svg
                     className="h-7 w-10 fill-current text-gray-500 -rotate-90 "
                     xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ export default function Landing() {
                   <h4 className="mid-titles">{component.title}</h4>
                   <p className="mid-text">{component.text}</p>
                   <button onClick={() => window.location.href = component.url} className="mid-btns">
-                    Learn More
+                    LEARN MORE
                   </button>
                 </div>
               ))}

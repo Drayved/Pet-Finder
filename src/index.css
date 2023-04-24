@@ -150,7 +150,7 @@ select:focus{
 }
 
 .mid-title{
-    @apply text-2xl pt-12 text-center
+    @apply text-2xl mt-12 text-center
 }
 
 .mid-titles{
@@ -158,7 +158,7 @@ select:focus{
 }
 
 .mid-text{
-    @apply  text-sm  w-[45%] mx-auto
+    @apply  text-xs  w-[45%] mx-auto
 }
 
 .mid-btns {
@@ -178,7 +178,7 @@ select:focus{
 }
 
 .arrows-container{
-    @apply flex justify-between mt-[-20px]
+    @apply flex justify-between mt-[-20px] 
 }
 
 .bubble {
@@ -211,22 +211,26 @@ select:focus{
         @apply text-center mx-[5%] 
     }
     .mid-btns{
-        @apply  w-40 
+        @apply  w-40 border-[1.5px] rounded-3xl py-2 mb-12 mx-auto text-xs font-bold
     }
     .row-container{
         @apply   pt-5 bg-gray-100;
         box-shadow: 0 1px 3px rgba(77,71,81,0.2);
     }
 
+    .mid-title{
+        @apply mt-7
+    }
+
     .mid-text{
-        @apply text-sm w-56 
+        @apply  w-60 
     }
 
 }
 
-@media(max-width: 850px){
+@media(max-width: 900px){
     .mid-container{
-        @apply mx-[170px]
+        @apply mx-[300px]
     }
 }
 
@@ -252,7 +256,15 @@ select:focus{
     }
 
     .animal-cards{
-        @apply h-[350px]
+        @apply h-[370px]
+    }
+
+    .animal-img{
+        
+    }
+
+    .animal-text{
+        @apply text-sm
     }
 
 

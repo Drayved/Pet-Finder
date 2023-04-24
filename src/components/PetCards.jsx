@@ -31,8 +31,8 @@ export default function PetCards({ num1, num2, pets, onFavoritesPage, handleRemo
                     <p className=" animal-text">
                       {animal.contact.address.city + ", " + animal.contact.address.state}
                     </p>
-                    {animal.distance ? (
-                      <p className=" animal-text">
+                    {animal.distance && !onFavoritesPage ? (
+                      <p className=" animal-text italic">
                         {animal.distance.toFixed(1) === 1 ? "mile away" : animal.distance.toFixed(1) + " miles away"}
                       </p>
                       
