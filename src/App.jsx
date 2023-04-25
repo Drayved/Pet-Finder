@@ -10,13 +10,9 @@ import Rabbits from "./pages/Rabbits"
 import SearchResults from "./pages/SearchResults";
 import Animal from "./pages/Animal";
 import Favorites from "./pages/Favorites";
-// export const apiKey = "op6A9muTJtyZ46FXgiji8TTFXZAfC9KxMWKswrW7fkLWo6oiJV"
-// export const apiSecret = "rIOVTAOjW46EZN52E8GcLNR4h9wBPWVYkyFp8AL4"
-// export const apiKey = "hIZLptHNbS2CL9HzCkMRWZ3ATzJYwIa6r3oEfIoKJXgo14GGyq"
-// export const apiSecret = "6J9hpXiKvOI69tDqVMo4fUz5Sk9Xjmkl31ZnHUf0"
-export const apiKey = "7Yoy9ZMXGs8Le0BSMMlqvKAAm3DCYT5w2efkWSa925DRQjldeY"
-export const apiSecret = "4p4kTl0gDUAqR1HPFvnDQ8bYTGVESjfGgcF56GFI"
 export const AuthContext = createContext();
+
+
 
 
 
@@ -25,25 +21,21 @@ function App() {
   const [results, setResults] = useState(null);
   const [filteredResults, setFilteredResults] = useState([]);
   const [zipCode, setZipCode] = useState("")
-  
 
   useEffect(() => {
-    const fetchAccessToken = async () => {
-      const res = await fetch("https://api.petfinder.com/v2/oauth2/token", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `grant_type=client_credentials&client_id=${apiKey}&client_secret=${apiSecret}`,
-      });
-      const json = await res.json();
-      console.log(json);
-      setAccessToken(json.access_token);
+    const fetchToken = async () => {
+      try {
+        const response = await fetch("http://localhost:5000");
+        const data = await response.json();
+        setAccessToken(data.access_token);
+      } catch (error) {
+        console.error(error);
+      }
     };
-    fetchAccessToken();
+  
+    fetchToken();
   }, []);
-
-
+  
   
   const router = createBrowserRouter(createRoutesFromElements(
     
