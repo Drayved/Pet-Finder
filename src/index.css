@@ -410,11 +410,20 @@ select:focus{
 
 @media(max-width: 360px){
     .search-zip{
-        @apply w-[90%] 
+        @apply w-[100%] px-5
+    }
+
+    .search-zip::placeholder,
+    .search-animal::placeholder{
+        @apply text-xs
+    }
+
+    .search-bars{
+        @apply w-[95%]
     }
 
     .search-animal{
-        @apply w-[90%]
+        @apply w-[100%] px-5
     }
 }
 
