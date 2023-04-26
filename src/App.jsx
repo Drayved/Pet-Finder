@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const response = await fetch("https://outstanding-steel-conifer.glitch.me/");
+        const response = await fetch("https://attractive-mixed-apricot.glitch.me/");
         const data = await response.json();
         setAccessToken(data.access_token);
       } catch (error) {
