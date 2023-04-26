@@ -36,7 +36,7 @@ body{
 }
 
 .sub-title{
-   @apply  mb-[1em] italic 
+   @apply  mb-12 italic 
 }
 
 .title,
