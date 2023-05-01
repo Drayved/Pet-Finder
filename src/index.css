@@ -169,10 +169,6 @@ select:focus{
     @apply bg-[#20ccf8] text-white
 }
 
-.footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3 relative bottom-0 
-}
-
 .adopt-btns:hover{
     @apply bg-[#370c52] text-white border-none
 }
@@ -193,6 +189,12 @@ select:focus{
     @apply bg-gray-800
 }
 
+/* Footer */
+
+.footer{
+    @apply  bg-purple-800 text-center text-[#edffec] py-3 fixed w-screen bottom-0 
+}
+
 /* Media */
 
 @media (min-width: 600px){
@@ -204,7 +206,7 @@ select:focus{
 
 @media(min-width: 768px){
     .mid-container{
-        @apply text-center flex flex-row border-none ;
+        @apply text-center flex flex-row border-none  ;
         box-shadow: none;
     }
     .mid-banner{

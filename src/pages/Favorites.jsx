@@ -15,7 +15,7 @@ window.scrollTo(0, 0)
     <>
       {pets.length > 0 ? 
       <PetCards pets={pets} onFavoritesPage={true} handleRemoveFavorite={handleRemoveFavorite} />
-      : <h4 className="text-center py-4">No pets added to favorites</h4>}
+      : <h4 className="text-center">No pets added to favorites</h4>}
     </>
     
   );
