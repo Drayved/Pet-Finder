@@ -192,7 +192,7 @@ select:focus{
 /* Footer */
 
 .footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3 w-screen absolute bottom-0
+    @apply  bg-purple-800 text-center text-[#edffec] py-3 w-[100%] absolute bottom-0
 }
 
 /* Media */
