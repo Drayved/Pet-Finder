@@ -170,7 +170,7 @@ select:focus{
 }
 
 .footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3  bottom-0 
+    @apply  bg-purple-800 text-center text-[#edffec] py-3 relative bottom-0 
 }
 
 .adopt-btns:hover{
@@ -211,7 +211,7 @@ select:focus{
         @apply text-center mx-[5%] 
     }
     .mid-btns{
-        @apply  w-40 border-[1.5px] rounded-3xl py-2 mb-12 mx-auto text-xs font-bold
+        @apply  w-40 border-[1.5px] rounded-3xl py-2 mb-12 mx-auto text-sm font-bold
     }
     .row-container{
         @apply   pt-5 bg-gray-100;
@@ -223,7 +223,7 @@ select:focus{
     }
 
     .mid-text{
-        @apply  w-60 
+        @apply  w-60 text-sm
     }
 
 }

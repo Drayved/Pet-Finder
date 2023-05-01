@@ -837,3 +837,453 @@ select:focus{
 
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-gray-200 text-gray-500 m-0 p-0 ;
+    font-family: 'Mukta', sans-serif;
+}
+
+/* navbar */
+
+
+.navbar{
+    @apply bg-purple-700 py-1 ;
+    color: #edffec;
+}
+
+.animal-btns {
+    @apply flex justify-around ;
+}
+
+.animal-btn:hover{
+    @apply  text-purple-400
+}
+
+
+/* Header */
+
+.top-info{
+    @apply flex justify-center flex-col items-center text-center;
+    @apply bg-hero bg-no-repeat bg-cover bg-center ;
+    color: #edffec;
+    height: 30%;
+
+}
+
+.title{
+    @apply mt-7 text-2xl 
+}
+
+.sub-title{
+   @apply  mb-4 italic 
+}
+
+.title,
+.sub-title{
+    text-shadow: 0 1px 10px #4d4751, 0 0 4px #4d4751;
+}
+
+.favorites-btn{
+    @apply absolute top-7 right-2 text-sm mt-0.5
+}
+
+/* Search */
+
+.search-bars{
+    @apply mb-9 bg-gray-100 flex rounded-md
+}
+
+.search-animal-container:hover,
+.search-zip-container:hover,
+.search-btn:hover{
+    @apply border-2 border-purple-900 rounded-md
+}
+
+.search-zip-container,
+.search-animal-container{
+    @apply flex 
+}
+
+.search-animal::placeholder,
+.search-zip::placeholder{
+    @apply text-gray-500
+}
+
+.search-animal,
+.search-zip{
+    @apply bg-gray-100 px-12 text-gray-700 border-purple-700 w-screen;
+    @apply flex my-2 
+}
+
+.search-animal{
+    @apply border-r-2  border-gray-400
+}
+
+input:focus, 
+textarea:focus,
+select:focus{
+    @apply outline-none 
+}
+
+.search-btn{
+    @apply bg-gray-100 text-black px-2 my-auto mr-1.5 bg-purple-700 py-2 text-white border rounded-md;
+    @apply flex justify-center align-middle
+}   
+
+.search-btn:hover,
+.search0btn:focus{
+    @apply border-purple-900 
+}
+
+/* animal list */
+
+
+
+.animal-list{
+    @apply flex flex-wrap gap-12 justify-center;
+    margin: 5rem 0
+}
+
+
+.animal-cards{
+    @apply bg-gray-200 shadow-md ;
+    @apply  p-0 ;
+    color: #48435c;
+    box-shadow: #29243f;
+    width: 230px;
+    height: 400px;
+}
+
+.animal-cards:hover{
+    @apply cursor-pointer border-2 border-purple-800
+}
+
+
+.animal-img {
+    @apply mx-auto w-full overflow-hidden relative;
+    height: 70%;
+    
+}
+
+.animal-card-text{
+    @apply text-center px-2
+}
+
+.remove-favorite{
+    @apply font-bold
+}
+
+.remove-favorite:hover{
+    @apply text-purple-800 
+}
+
+.animal-details{
+    box-shadow: px 0px 0px rgb(0, 0, 0)
+}
+
+
+/* Middle banner */
+
+.mid-container{
+    @apply  flex flex-col justify-center bg-gray-100;
+    box-shadow: 0 1px 3px rgba(77,71,81,0.2);
+    
+}
+
+.mid-banner{
+    @apply text-center;
+}
+
+.mid-title{
+    @apply text-2xl mt-12 text-center
+}
+
+.mid-titles{
+    @apply text-lg mt-10;
+    color: #004c81;
+}
+
+.mid-text{
+    @apply  text-xs mx-auto;
+    width: 45%;
+}
+
+.mid-btns {
+    @apply border-t mt-12 py-3 flex align-middle justify-center w-screen text-blue-900 font-semibold text-sm;
+    border-color: #20ccf8;
+}
+
+.mid-btns:hover{
+    @apply text-white;
+    background: #20ccf8;
+}
+
+.footer{
+    @apply  bg-purple-800 text-center py-3  bottom-0;
+    color: #edffec;
+}
+
+.adopt-btns:hover{
+    @apply text-white border-none;
+    background: #370c52;
+}
+
+.arrows-container{
+    @apply flex justify-between; 
+    margin-top: -20px;
+}
+
+.bubble {
+    @apply flex flex-row bg-gray-400 w-2 h-2 rounded-lg my-0 mx-1 cursor-pointer; 
+  }
+  
+.bubbles-container{
+    @apply flex justify-center mt-2
+}
+
+.active-bubble{
+    @apply bg-gray-800
+}
+
+/* Media */
+
+@media (min-width: 600px){
+    .app-title{
+        @apply hidden
+    }
+}
+
+
+@media(min-width: 768px){
+    .mid-container{
+        @apply text-center flex flex-row border-none ;
+        box-shadow: none;
+    }
+    .mid-banner{
+        @apply text-center;
+        margin: 0 5%; 
+    }
+    .mid-btns{
+        @apply  w-40 rounded-3xl py-2 mb-12 mx-auto text-xs font-bold;
+        border: 1.5px;
+    }
+    .row-container{
+        @apply   pt-5 bg-gray-100;
+        box-shadow: 0 1px 3px rgba(77,71,81,0.2);
+    }
+
+    .mid-title{
+        @apply mt-7
+    }
+
+    .mid-text{
+        @apply  w-60 
+    }
+
+}
+
+@media(max-width: 900px){
+    .mid-container{
+        margin: 0 300px;
+    }
+}
+
+@media(max-width: 768px){
+    .mid-container{
+        @apply mx-0
+    }
+}
+
+
+@media(max-width: 680px){
+    .animal-cards{
+        width: 200px;
+    }
+
+    .search-animal,
+    .search-zip{
+        @apply w-56
+    }
+
+    .animal-details{
+        @apply  mx-auto;
+        width: 90%;
+    }
+
+    .animal-cards{
+        height:370px;
+    }
+
+    .animal-text{
+        @apply text-sm
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .animal-btns {
+      @apply hidden
+    }
+    
+    .animal-btns.open{
+        @apply block text-xs 
+    }
+
+    .navbar-icon {
+      @apply block
+    }
+
+    .navbar-icon{
+        @apply flex justify-end mr-3 bg-gray-100;
+        @apply cursor-pointer;
+        box-shadow: 0 2px 1px rgba(5, 5, 5, 0.2);
+        width:28px;
+        height:4px;
+        margin: 2px 12px 0 2px;
+    
+    }
+
+    .menu-icon:hover span, 
+    .menu-icon:hover span:nth-child(2), 
+    .menu-icon:hover span:nth-child(3){
+        @apply bg-purple-400
+      }
+      
+
+
+    .navbar{
+        @apply flex justify-between h-9
+    }
+
+    .menu-icon{
+        @apply absolute right-0 p-0 cursor-pointer m-0;
+    }
+
+    ul{
+        @apply mt-7 mr-1 z-50
+    }
+
+    li{
+        @apply bg-transparent bg-purple-700 p-1.5 z-auto;
+        
+    }
+
+    .app-title{
+        @apply ml-3 my-auto text-gray-100 font-bold;
+        
+    }
+
+    .app-title:hover{
+        @apply text-purple-400
+    }
+    
+    .hide-on-mobile{
+        @apply hidden
+    }    
+}
+
+
+@media(max-width: 485px){
+    .animal-cards{
+        @apply gap-0;
+        width: 180px;
+        margin: 0 -20px;
+    }
+
+
+    .search-bars{
+        @apply h-10
+    }
+
+    .search-animal,
+    .search-zip{
+        @apply w-40 text-xs
+    }
+
+    .title{
+        @apply text-lg text-center
+    }
+
+    .sub-title{
+        @apply text-sm
+    }
+
+    .prev-image,
+    .next-image{
+        @apply hidden
+    }
+
+    .current-image{
+        @apply w-screen
+    }
+
+    .animal-text{
+        @apply text-xs
+    }
+
+}
+
+
+
+@media(max-width: 400px){
+    .animal-cards{
+        width: 145px;
+    }
+
+    .animal-card-text{
+        @apply text-xs
+    }
+
+    .mid-container{
+        width: 100%;
+    }
+
+    .mid-text{
+        @apply  mx-auto;
+        width: 80%;
+    }
+
+    .search-btn{
+        @apply w-8 
+    }
+
+    .adoption-details{
+        @apply mx-auto;
+        width: 90%;
+    }
+
+    .animal-cards{
+        height: 280px;
+    }
+
+    .animal-img{
+       height: 65%;
+    }
+
+    .search-animal::placeholder{
+        @apply text-xs
+    }
+}
+
+@media(max-width: 360px){
+    .search-zip{
+        width: 90%;
+    }
+
+    .search-animal{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
