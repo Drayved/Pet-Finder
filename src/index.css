@@ -27,7 +27,7 @@ body{
 
 .top-info{
     @apply flex justify-center flex-col items-center text-center;
-    @apply bg-hero text-[#edffec]  bg-no-repeat bg-cover bg-center h-[30%] mb-10
+    @apply bg-hero text-[#edffec]  bg-no-repeat bg-cover bg-center h-[300px]
 
 }
 
@@ -192,7 +192,7 @@ select:focus{
 /* Footer */
 
 .footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3 fixed w-screen bottom-0 
+    @apply  bg-purple-800 text-center text-[#edffec] py-3 w-screen absolute bottom-0
 }
 
 /* Media */
