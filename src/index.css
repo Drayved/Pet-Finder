@@ -101,7 +101,7 @@ select:focus{
 
 
 .animal-list{
-    @apply flex flex-wrap gap-12 my-[5rem] justify-center 
+    @apply flex flex-wrap gap-12 my-[5rem] justify-center my-28
 }
 
 
