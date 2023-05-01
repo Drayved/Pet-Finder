@@ -15,18 +15,18 @@ export default function PictureCarousel({ photos }) {
         <img
           src={photos[prevIndex].medium}
           alt={`Animal ${prevIndex + 1}`}
-          className="opacity-30 h-96 w-[30%] prev-image"
+          className="opacity-30 w-[30%] h-96 prev-image"
         />
       )}
 
-      <div className="relative">
+      <div className="relative w-[30%]">
         {photos.map((photo, i) => (
           <img
             key={i}
             src={photo.medium}
             alt={`Animal ${i + 1}`}
             style={{ display: i === index ? "inline-block" : "none", margin: 0 }}
-            className="h-96 w-[100%] min-w-[33%] current-image"
+            className="h-96 w-[100%] current-image"
           />
         ))}
 
