@@ -55,7 +55,7 @@ export default function Animal() {
       {animal && animal.photos && (
         <div>
           <PictureCarousel photos={animal.photos} />
-          <div className="flex flex-col md:flex-row justify-center">
+          <div className="animal-info flex flex-col md:flex-row justify-center ">
             <div className="rounded-md mt-10 w-[600px] pl-5 ml-6 py-5 bg-slate-100 animal-details">
               <h2 className="text-3xl font-bold mb-4 ">{animal.name}</h2>
               <div className="flex flex-col mt-4 ">

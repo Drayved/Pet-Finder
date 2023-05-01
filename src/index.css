@@ -230,6 +230,8 @@ select:focus{
 
 }
 
+
+
 @media(max-width: 900px){
     .mid-container{
         @apply mx-[300px]
