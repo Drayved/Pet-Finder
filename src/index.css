@@ -54,11 +54,11 @@ body{
 
 /* Loading Screen */
     .loading-container{
-        @apply flex justify-center mt-72
+        @apply flex justify-center mt-20 text-center
     }
 
     .loading-text{
-        @apply text-4xl font-semibold
+        @apply text-4xl font-semibold text-center
     }
 
     .loading-subtext{
@@ -93,6 +93,37 @@ body{
       
       .dot:nth-child(3) {
         animation-delay: 0.5s;
+      }
+
+      @media(max-width: 800px){
+        .loading-text{
+            @apply text-2xl
+        }
+
+        .loading-dots{
+            @apply mt-[1.1rem] ml-1
+        }
+      }
+
+      @media(max-width: 525px){
+        .loading-text{
+            @apply text-xl ml-5
+        }
+        .loading-dots{
+            @apply mt-[1.1rem] mr-2 mt-[0.95rem]
+        }
+
+        .loading-subtext{
+            @apply text-lg ml-5
+        }
+
+        .waiting-text{
+            @apply ml-5
+        }
+
+        .dot{
+            @apply mx-0.5 
+        }
       }
       
       @keyframes dotAnimation {
