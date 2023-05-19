@@ -75,14 +75,16 @@ body{
     }
       
     .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: #000;
-        margin: 0 5px;
+        @apply w-[5px] h-[5px] rounded-lg bg-[#000] mx-[5px] opacity-0;
         animation: dotAnimation 1.5s infinite ease-in-out;
-        opacity: 0;
     }
+
+    @media(max-width:460px){
+        .loading-dots{
+            @apply mt-[-79px]
+        }
+    }
+
     .dot:nth-child(1) {
         animation-delay: 0.1s;
       }
