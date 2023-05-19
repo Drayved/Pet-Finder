@@ -83,11 +83,7 @@ body{
         animation: dotAnimation 1.5s infinite ease-in-out;
     }
 
-    @media(max-width: 435px){
-        .loading-dots{
-            @apply mt-[-78px]
-        }
-    }
+
 
     .dot:nth-child(1) {
         animation-delay: 0.1s;
@@ -176,7 +172,7 @@ select:focus{
 
 
 .animal-list{
-    @apply flex flex-wrap gap-12 my-[5rem] justify-center my-28
+    @apply flex flex-wrap gap-12 my-[5rem] justify-center mt-10 mb-16
 }
 
 
@@ -215,7 +211,7 @@ select:focus{
 /* Middle banner */
 
 .mid-container{
-    @apply  flex flex-col justify-center bg-gray-100;
+    @apply  flex flex-col justify-center bg-gray-100 mb-3;
     box-shadow: 0 1px 3px rgba(77,71,81,0.2);
     
 }
@@ -298,17 +294,11 @@ select:focus{
     @apply h-full w-full
 }
 
-@media(min-width: 1000px){
-    .right-pic,
-    .left-pic{
-        
-    }
-}
 
 /* Footer */
 
 .footer{
-    @apply  bg-purple-800 text-center text-[#edffec] py-3 w-[100%] absolute bottom-0
+    @apply  bg-purple-800 text-center text-[#edffec] py-2 w-[100%] absolute bottom-0
 }
 
 /* Media */
@@ -318,7 +308,6 @@ select:focus{
         @apply hidden
     }
 }
-
 
 @media(min-width: 768px){
     .mid-container{
@@ -490,7 +479,11 @@ select:focus{
 
 }
 
-
+@media(max-width: 435px){
+    .loading-dots{
+        @apply mt-[-78px]
+    }
+}
 
 @media(max-width: 400px){
     .animal-cards{

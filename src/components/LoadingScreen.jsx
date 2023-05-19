@@ -21,7 +21,7 @@ const LoadingScreen = () => {
                 <p className='loading-subtext'>This may take a few moments</p>
                 {showAdditionalText && 
                 <p className='waiting-text'>
-                    Thank you for hanging in there! shouldn't be much longer!
+                    Thank you for hanging in there! Shouldn't be much longer!
                 </p>}
             </div>
 
