@@ -54,7 +54,7 @@ body{
 
 /* Loading Screen */
     .loading-container{
-        @apply flex justify-center mt-20 ml-5
+        @apply flex justify-center mt-20
     }
 
     .loading-text{
@@ -83,9 +83,9 @@ body{
         animation: dotAnimation 1.5s infinite ease-in-out;
     }
 
-    @media(max-width:460px){
+    @media(max-width: 435px){
         .loading-dots{
-            @apply mt-[-79px]
+            @apply mt-[-78px]
         }
     }
 
