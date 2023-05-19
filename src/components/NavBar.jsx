@@ -23,9 +23,10 @@ export default function NavBar() {
         <span className={`navbar-icon ${isMenuOpen ? "open" : ""}`}></span>
         <span className={`navbar-icon ${isMenuOpen ? "open" : ""}`}></span>
     
-    </div>     
-      <ul className={`animal-btns ${isMenuOpen ? "open" : ""}`} onClick={handleMenuClick }>
-        <li className="hide-on-mobile animal-btn text-gray-100 font-bold hover:text-purple-400">
+    </div>
+    <div className={`nav-btns-container ${isMenuOpen ? "open" : ""}`} onClick={handleMenuClick }>
+    <ul className={`animal-btns ${isMenuOpen ? "open" : ""}`}>
+        <li className="hide-on-mobile animal-btn text-xl text-gray-100 font-bold hover:text-purple-400">
           <Link to="/">PetFinder</Link>
         </li>
         <li className="animal-btn">
@@ -49,5 +50,7 @@ export default function NavBar() {
       </ul>
        
     </div>
+    </div>     
+      
   );
 }

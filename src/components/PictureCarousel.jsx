@@ -9,24 +9,24 @@ export default function PictureCarousel({ photos }) {
   const showArrows = photos.length > 1;
 
   return (
-    <div className="relative flex justify-center bg-[#050307] w-[100%] overflow-hidden mt-10">
+    <div className="slideshow-container" >
 
       {showArrows && (
         <img
           src={photos[prevIndex].medium}
           alt={`Animal ${prevIndex + 1}`}
-          className="opacity-30 w-[30%] h-96 prev-image"
+          className="left-pic"
         />
       )}
 
-      <div className="relative w-[30%]">
+      <div className="relative">
         {photos.map((photo, i) => (
           <img
             key={i}
             src={photo.medium}
             alt={`Animal ${i + 1}`}
             style={{ display: i === index ? "inline-block" : "none", margin: 0 }}
-            className="h-96 w-[100%] current-image"
+            className="current-pic "
           />
         ))}
 
@@ -44,14 +44,14 @@ export default function PictureCarousel({ photos }) {
         <img
           src={photos[nextIndex].medium}
           alt={`Animal ${nextIndex + 1}`}
-          className="opacity-30 h-96 w-[30%] next-image"
+          className="right-pic"
         />
       )}
 
       {showArrows && (
         <button
           onClick={() => setIndex(prevIndex)}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 arrow-btns"
+          className="left-arrow arrow-btns"
         >
           <svg
             className="h-10 w-10 fill-current text-gray-500 -rotate-90 "
@@ -66,7 +66,7 @@ export default function PictureCarousel({ photos }) {
       {showArrows && (
         <button
           onClick={() => setIndex(nextIndex)}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2 arrow-btns"
+          className="right-arrow arrow-btns"
         >
           <svg
             className="h-10 w-10 fill-current text-gray-500 rotate-90"

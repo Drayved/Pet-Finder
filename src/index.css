@@ -9,13 +9,16 @@ body{
 
 /* navbar */
 
+.hide-on-mobile{
+    @apply text-xl 
+}
 
 .navbar{
-    @apply bg-purple-700 py-1 text-[#edffec];
+    @apply bg-purple-700 p-2 text-[#edffec];
 }
 
 .animal-btns {
-    @apply flex justify-around ;
+    @apply flex justify-around items-center my-auto;
 }
 
 .animal-btn:hover{
@@ -32,11 +35,12 @@ body{
 }
 
 .title{
-    @apply mt-7 text-2xl 
+    @apply mt-7 text-3xl font-semibold;
+    
 }
 
 .sub-title{
-   @apply  mb-12 italic 
+   @apply  mb-12 italic text-lg
 }
 
 .title,
@@ -47,6 +51,64 @@ body{
 .favorites-btn{
     @apply absolute top-7 right-2 text-sm mt-0.5
 }
+
+/* Loading Screen */
+    .loading-container{
+        @apply flex justify-center mt-72
+    }
+
+    .loading-text{
+        @apply text-4xl font-semibold
+    }
+
+    .loading-subtext{
+        @apply text-2xl text-center
+    }
+
+    .waiting-text{
+        @apply text-center text-lg italic mt-10
+    }
+
+    .loading-dots {
+        @apply flex mt-[25px];
+        
+    }
+      
+    .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #000;
+        margin: 0 5px;
+        animation: dotAnimation 1.5s infinite ease-in-out;
+        opacity: 0;
+    }
+    .dot:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      
+      .dot:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      
+      .dot:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+      
+      @keyframes dotAnimation {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
 
 /* Search */
 
@@ -189,6 +251,47 @@ select:focus{
     @apply bg-gray-800
 }
 
+/* Slideshow */
+
+.arrow-btns{
+    @apply opacity-0 
+}
+
+.right-arrow{
+    @apply absolute top-1/2 right-2 transform -translate-y-1/2
+}
+
+.left-arrow{
+    @apply absolute top-1/2 left-2 transform -translate-y-1/2
+}
+
+.slideshow-container{
+    @apply h-[560px] relative flex justify-center bg-[#050307] w-[100%] overflow-hidden mt-2
+}
+
+.slideshow-container:hover{
+    .arrow-btns{
+        @apply opacity-100
+    }
+} 
+
+.right-pic,
+.left-pic{
+    @apply  opacity-30  min-w-[100px]
+}
+
+
+.current-pic{
+    @apply h-full w-full
+}
+
+@media(min-width: 1000px){
+    .right-pic,
+    .left-pic{
+        
+    }
+}
+
 /* Footer */
 
 .footer{
@@ -280,11 +383,15 @@ select:focus{
     }
     
     .animal-btns.open{
-        @apply block text-xs 
+        @apply flex flex-col rounded-sm text-lg mt-10
+    }
+
+    .nav-btns-container.open{
+        @apply flex flex-col bg-purple-700 
     }
 
     .navbar-icon {
-      @apply block
+      @apply block z-50
     }
 
     .navbar-icon{
@@ -303,7 +410,7 @@ select:focus{
 
 
     .navbar{
-        @apply flex justify-between h-9
+        @apply flex justify-between h-12
     }
 
     .menu-icon{
@@ -311,16 +418,16 @@ select:focus{
     }
 
     ul{
-        @apply mt-7 mr-1 z-50
+        @apply mt-7 z-50 mr-[-8px] bg-purple-700
     }
 
     li{
-        @apply bg-transparent bg-purple-700 p-1.5 z-auto;
+        @apply bg-purple-700 z-auto my-5 mx-2 text-left;
         
     }
 
     .app-title{
-        @apply ml-3 my-auto text-gray-100 font-bold;
+        @apply ml-3 my-auto text-gray-100 font-bold text-xl;
         
     }
 
@@ -331,6 +438,8 @@ select:focus{
     .hide-on-mobile{
         @apply hidden
     }    
+
+    
 }
 
 
@@ -360,10 +469,6 @@ select:focus{
     .prev-image,
     .next-image{
         @apply hidden
-    }
-
-    .current-image{
-        @apply w-screen
     }
 
     .animal-text{
