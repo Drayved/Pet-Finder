@@ -341,6 +341,11 @@ select:focus{
     .mid-container{
         @apply mx-[300px]
     }
+
+    .right-pic,
+    .left-pic{
+        @apply hidden
+    }
 }
 
 @media(max-width: 768px){

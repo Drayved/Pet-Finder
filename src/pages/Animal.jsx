@@ -97,7 +97,7 @@ export default function Animal() {
         </div>
       )}
       <div className="mt-10">
-        <h1 className="w-[95%] mx-auto text-3xl font-semibold text-purple-800 text-center -mb-12">Other Animals Available for Adoption</h1>
+        <h1 className="w-[95%] mx-auto text-3xl font-semibold text-purple-800 text-center mb-10">Other Animals Available for Adoption</h1>
         <PetCards num1={0} num2={6} />
       </div>
     </div>
