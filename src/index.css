@@ -70,7 +70,7 @@ body{
     }
 
     .loading-dots {
-        @apply flex mt-[25px];
+        @apply flex mt-[-50px] justify-center
         
     }
       
@@ -95,52 +95,12 @@ body{
         animation-delay: 0.5s;
       }
 
-      @media(max-width: 800px){
+       @media(max-width: 800px){
         .loading-text{
             @apply text-2xl
         }
+      } 
 
-        .loading-dots{
-            @apply mt-[1.1rem] px-0
-        }
-      }
-
-      @media(max-width: 525px){
-        .loading-text{
-            @apply text-2xl ml-5
-        }
-        .loading-dots{
-            @apply  mt-24 relative top-3 right-60
-        }
-
-        .loading-subtext{
-            @apply text-lg ml-5
-        }
-
-        .waiting-text{
-            @apply ml-5
-        }
-
-
-      }
-
-      @media(max-width: 480px){
-        .loading-dots{
-            @apply  right-52
-        }
-      }
-
-      @media(max-width: 430px){
-        .loading-dots{
-            @apply  right-48
-        }
-      }
-
-      @media(max-width: 400px){
-        .loading-dots{
-            @apply right-44
-        }
-      }
       
       @keyframes dotAnimation {
         0% {
