@@ -26,8 +26,9 @@ const LoadingScreen = () => {
             </div>
 
             
-        </div>            
-        <div className="loading-dots">
+        </div>
+                    
+        <div className={showAdditionalText ? "loading-dots" : "dots-loading"}>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>

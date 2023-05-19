@@ -73,6 +73,10 @@ body{
         @apply flex mt-[-50px] justify-center
         
     }
+
+    .dots-loading{
+        @apply flex justify-center mt-4
+    }
       
     .dot {
         @apply w-[5px] h-[5px] rounded-lg bg-[#000] mx-[5px] opacity-0;
