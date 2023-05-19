@@ -275,7 +275,7 @@ select:focus{
 }
 
 .slideshow-container{
-    @apply h-[560px] relative flex justify-center bg-[#050307] w-[100%] overflow-hidden mt-2
+    @apply h-[560px] relative flex justify-center bg-[#050307] w-[100%] overflow-hidden mt-0.5
 }
 
 .slideshow-container:hover{
