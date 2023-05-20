@@ -278,7 +278,8 @@ select:focus{
     @apply h-[560px] relative flex justify-center bg-[#050307] w-[100%] overflow-hidden mt-0.5
 }
 
-.slideshow-container:hover{
+.slideshow-container:hover,
+.slideshow-container:focus{
     .arrow-btns{
         @apply opacity-100
     }
