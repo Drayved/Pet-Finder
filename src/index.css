@@ -483,6 +483,9 @@ select:focus{
         @apply text-xs
     }
 
+    .arrow-btns{
+        @apply hidden
+    }
 }
 
 @media(max-width: 435px){
