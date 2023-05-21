@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function PictureCarousel({ photos }) {
   const [index, setIndex] = useState(0);
+  const containerRef = useRef(null);
+  const touchStartX = useRef(0);
 
   const prevIndex = index === 0 ? photos.length - 1 : index - 1;
   const nextIndex = index === photos.length - 1 ? 0 : index + 1;
 
   const showArrows = photos.length > 1;
 
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const touchDistance = touchEndX - touchStartX.current;
+
+    if (touchDistance > 50) {
+      setIndex(prevIndex);
+    } else if (touchDistance < -50) {
+      setIndex(nextIndex);
+    }
+  };
+
   return (
-    <div className="slideshow-container" >
+    <div className="slideshow-container" ref={containerRef} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
 
       {showArrows && (
         <img
@@ -74,9 +91,24 @@ export default function PictureCarousel({ photos }) {
             viewBox="0 0 20 20"
           >
             <path d="M10 0L0 10h3v10h14V10h3L10 0z" />
-          </svg>
-        </button>
-      )}
-    </div>
-  );
+        </svg>
+      </button>
+    )}
+
+    {showArrows && (
+      <button
+        onClick={() => setIndex(nextIndex)}
+        className="right-arrow arrow-btns"
+      >
+        <svg
+          className="h-10 w-10 fill-current text-gray-500 rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path d="M10 0L0 10h3v10h14V10h3L10 0z" />
+        </svg>
+      </button>
+    )}
+  </div>
+);
 }
