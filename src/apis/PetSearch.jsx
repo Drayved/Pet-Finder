@@ -14,7 +14,6 @@ export default function PetSearch({type}) {
   useEffect(() => {
     const fetchPets = async () => {
       if (accessToken === null) return;
-      
       let endpoint = `https://api.petfinder.com/v2/animals/?limit=50${type ? `&type=${type}` : ""}`;
       if (locationPermission) {
         if (zipCode) {

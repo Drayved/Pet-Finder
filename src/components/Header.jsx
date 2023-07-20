@@ -78,9 +78,8 @@ export default function Header() {
             
           </div>
           <button 
-            className="search-btn" 
+            className="search-btn fa fa-search fa-lg" 
             type="submit"><i 
-            class="fa fa-search fa-lg" 
             aria-hidden="true"></i>
           </button>
           
