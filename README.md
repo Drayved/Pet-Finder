@@ -22,7 +22,6 @@ Pet Finder is a web application that pulls pet information from the Pet Finder A
 - HTML
 - Tailwind CSS
 - JavaScript
-- Express.js (Backend Server)
 
 ## Deployment
 
@@ -30,5 +29,8 @@ The Pet Finder application is deployed [here](https://davids-petfinder.netlify.a
 
 Feel free to explore the application and find your perfect furry friend!
 
+## Screenshots
 
+![Screenshot 1](/screenshots/screenshot1.JPG)
+![Screenshot 2](/screenshots/screenshot2.JPG)
 
